@@ -23,18 +23,13 @@ logging.basicConfig(
     level=logging.INFO)
 
 LOGGER = logging.getLogger("[MikuXProbot]")
-LOGGER.info("|----------------------------------|\n"
-            "|• [MIKU]: She Is Created By Niggee Hodaka|\n"
-            "|• t.me/h0daka | github.com/h0daka |\n"
-            "|----------------------------------|\n")
-LOGGER.info("[MIKU]: Starting")
 
 log = logging.getLogger('[Your Bot Is Building]')
 
 # if version < 3.6, stop bot.
 if sys.version_info[0] < 3 or sys.version_info[1] < 6:
     LOGGER.error(
-        "[MIKU]: You MUST have a python version of at least 3.6! Multiple features depend on this. Bot quitting.]"
+        "You MUST have a python version of at least 3.6! Multiple features depend on this. Bot quitting.]"
     )
     quit(1)
 
@@ -217,7 +212,7 @@ DEV_USERS.add(OWNER_ID)
 
 if not SPAMWATCH_API:
     sw = None
-    LOGGER.warning("[MIKU]: SpamWatch API key Expired Or Losted!")
+    LOGGER.warning("SpamWatch API key Expired Or Losted!")
     
 else:
     sw = spamwatch.Client(SPAMWATCH_API)
@@ -225,7 +220,7 @@ else:
 pgram = Client("Miku", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 
 #install aiohttp session
-print("[Miku]: Scanning AIO http session")
+print("Scanning AIO http session")
 aiohttpsession = ClientSession() 
 
 REDIS = StrictRedis.from_url(REDIS_URL, decode_responses=True)
@@ -234,7 +229,7 @@ try:
 
     REDIS.ping()
 
-    LOGGER.info("[MIKU]: Connecting To Redis Database")
+    LOGGER.info("Connecting To Redis Database")
 
 except BaseException:
 
@@ -244,10 +239,10 @@ finally:
 
    REDIS.ping()
 
-   LOGGER.info("[MIKU]: Redis Database Successfully! Connected")
+   LOGGER.info("Redis Database Successfully! Connected")
 
 #install arq
-print("[MIKU]: Connecting ARQ Client")
+print("Connecting ARQ Client")
 arq = (ARQ_API_URL, ARQ_API_KEY, aiohttpsession)
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 telethn = TelegramClient("Miku", API_ID, API_HASH)
@@ -272,10 +267,10 @@ tg.RegexHandler = CustomRegexHandler
 tg.CommandHandler = CustomCommandHandler
 tg.MessageHandler = CustomMessageHandler
 
-print("[MIKU]: Connected Pyrogram Client")
+print("Connected Pyrogram Client")
 pgram.start()
 
-print("[MIKU]: Checking Errors")
+print("Checking Errors")
 
 bottie = pgram.get_me()
 
