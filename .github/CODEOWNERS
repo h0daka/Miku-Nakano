@@ -1,0 +1,9 @@
+# See https://help.github.com/articles/about-codeowners/ for valid syntax for entries.
+# Default owners for everything in the repo, unless a later match takes precedence
+
+# Miku owns the files under blacklist thingies
+/MikuXProBot/modules/blacklistusers.py @H0daka
+/MikuXProBot/modules/sql/blacklistusers_sql.py @H0daka
+#pep8-ing the code doesn't change maker
+/MikuXProBot/modules/paste.py @H0daka
+/MikuXProBot/modules/speed_test.py @H0daka
