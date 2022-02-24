@@ -12,7 +12,6 @@ from telethon.sessions import StringSession
 from telethon import TelegramClient
 from aiohttp import ClientSession
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
-from MikuXProBot.__main__ import PM_START_TEXT
 
 StartTime = time.time()
 
@@ -222,10 +221,6 @@ if not SPAMWATCH_API:
     
 else:
     sw = spamwatch.Client(SPAMWATCH_API)
-
-if "@Mikuxprobot" not in PM_START_TEXT:
-    LOGGER.warning(f"{OWNER_ID} Is Cheating. So Bot Functioning Has Been Stopped")
-    sys.exit(1)
 
 else:
     LOGGER.info("Congrats!! Bot has started successfully")
