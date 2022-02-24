@@ -222,9 +222,6 @@ if not SPAMWATCH_API:
 else:
     sw = spamwatch.Client(SPAMWATCH_API)
 
-else:
-    LOGGER.info("Congrats!! Bot has started successfully")
-
 pgram = Client("Miku", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 
 #install aiohttp session
