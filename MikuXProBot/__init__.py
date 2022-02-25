@@ -217,8 +217,6 @@ if not SPAMWATCH_API:
 else:
     sw = spamwatch.Client(SPAMWATCH_API)
 
-pgram = Client("Miku", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
-
 #install aiohttp session
 print("Scanning AIO http session")
 aiohttpsession = ClientSession() 
@@ -246,7 +244,6 @@ print("Connecting ARQ Client")
 arq = (ARQ_API_URL, ARQ_API_KEY, aiohttpsession)
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 telethn = TelegramClient("Miku", API_ID, API_HASH)
-pbot = Client("Miku", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 mongo_client = MongoClient(MONGO_DB_URI)
 db = mongo_client.Miku
 dispatcher = updater.dispatcher
@@ -267,11 +264,9 @@ tg.RegexHandler = CustomRegexHandler
 tg.CommandHandler = CustomCommandHandler
 tg.MessageHandler = CustomMessageHandler
 
+pgram = Client("Miku", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 print("Connected Pyrogram Client")
 pgram.start()
-
-print("Checking Errors")
-
 bottie = pgram.get_me()
 
 BOT_ID = bottie.id
