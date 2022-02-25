@@ -4,7 +4,7 @@ from MikuXProBot import dispatcher, DRAGONS
 from MikuXProBot.modules.helper_funcs.extraction import extract_user
 from telegram.ext import CallbackContext, run_async, CallbackQueryHandler
 import MikuXProBot.modules.sql.approve_sql as sql
-from MikuXProBotmodules.helper_funcs.chat_status import user_admin
+from MikuXProBot.modules.helper_funcs.chat_status import user_admin
 from MikuXProBot.modules.log_channel import loggable
 from telegram import ParseMode, InlineKeyboardMarkup, InlineKeyboardButton, Update
 from telegram.utils.helpers import mention_html
