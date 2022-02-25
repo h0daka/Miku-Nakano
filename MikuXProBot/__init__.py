@@ -265,9 +265,6 @@ tg.CommandHandler = CustomCommandHandler
 tg.MessageHandler = CustomMessageHandler
 
 pgram = Client("Miku", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
-print("Connected Pyrogram Client")
-pgram.start()
-bottie = pgram.get_me()
 
 BOT_ID = bottie.id
 BOT_USERNAME = bottie.username
