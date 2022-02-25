@@ -59,6 +59,9 @@ buttons = [
                         InlineKeyboardButton(
                              text="Summon Me 🏹",
                              url="https://t.me/MikuXProBot?startgroup=true"),
+                        InlineKeyboardButton(
+                             text="Repo 🗞️",
+                             url="https://github.com/h0daka/Miku-Nakano"),
                     ],
                    [                  
                        InlineKeyboardButton(
