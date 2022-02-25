@@ -264,7 +264,7 @@ tg.RegexHandler = CustomRegexHandler
 tg.CommandHandler = CustomCommandHandler
 tg.MessageHandler = CustomMessageHandler
 
-pgram = Client("Miku", bot_token=BOT_TOKEN, api_id=API_ID, api_hash=API_HASH)
+pgram = Client("Miku", bot_token=TOKEN, api_id=API_ID, api_hash=API_HASH)
 
 print("[INFO]: STARTING BOT CLIENT")
 pgram.start()
