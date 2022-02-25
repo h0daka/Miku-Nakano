@@ -14,7 +14,6 @@
 <img src="https://img.shields.io/badge/python-3.10.1-green?style=for-the-badge&logo=appveyor" alt="Python Version">
 <img src="https://img.shields.io/badge/Telethon-1.24.0-yellow?style=for-the-badge&logo=appveyor" alt="Telethon Version">
 <img src="https://img.shields.io/badge/Pyrogram-1.4.1-red?style=for-the-badge&logo=appveyor" alt="Pyrogram Version">
-<img src="https://img.shields.io/github/repo-size/h0daka/Miku-Nakano?style=for-the-badge&logo=appveyor" alt="Repository Size">
 <img src="https://img.shields.io/github/forks/h0daka/Miku-Nakano?style=for-the-badge&logo=appveyor" alt="Forks">
 <img src="https://img.shields.io/github/stars/h0daka/Miku-Nakano?style=for-the-badge&logo=appveyor" alt="Stars"> <br>
 
