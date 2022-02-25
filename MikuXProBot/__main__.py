@@ -363,7 +363,7 @@ def miku_callback_data(update, context):
                     InlineKeyboardButton(text="Try Inline ✨", switch_inline_query_current_chat="",),
                  ],
                  [
-                    InlineKeyboardButton(text="Updates 🕊️", url="t.me/Pegasusupdates"),
+                    InlineKeyboardButton(text="Updates 🕊️", url="t.me/MikuXUpdates"),
                     InlineKeyboardButton(text="Support 🚑", url="t.me/Mikussupport"),
                  ],
                  [
