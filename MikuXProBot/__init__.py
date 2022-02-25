@@ -265,10 +265,3 @@ tg.CommandHandler = CustomCommandHandler
 tg.MessageHandler = CustomMessageHandler
 
 pgram = Client("Miku", bot_token=TOKEN, api_id=API_ID, api_hash=API_HASH)
-
-print("[INFO]: STARTING BOT CLIENT")
-bottie = pgram.get_me()
-BOT_ID = bottie.id
-BOT_USERNAME = bottie.username
-BOT_NAME = bottie.first_name
-BOT_MENTION = bottie.mention
