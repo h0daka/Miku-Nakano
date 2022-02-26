@@ -18,10 +18,10 @@ from pyrogram import __version__ as pyro
 
 edit_time = 5
 """ =======================CONSTANTS====================== """
-file1 = "https://telegra.ph//file/0e1f0be793724af68e854.jpg"
-file2 = "https://telegra.ph//file/236bfe768cb5ff89e76b6.jpg"
-file3 = "https://telegra.ph/file/1dbcdedfc78d0318a288b.jpg"
-file4 = "https://telegra.ph/file/ac522b519f77a1054e9e9.jpg"
+file1 = "https://telegra.ph/file/6d4fa039030c7fe150399.jpg"
+file2 = "https://telegra.ph/file/db34c84b42d84f228a114.jpg"
+file3 = "https://telegra.ph/file/3b6c5ff441fae8ed6462c.jpg"
+file4 = "https://telegra.ph/file/7b60d9170a4d482851f4f.jpg"
 """ =======================CONSTANTS====================== """
 
 START_TIME = datetime.utcnow()
