@@ -62,6 +62,16 @@
          "description": "A channel where bot will print who added it to what group, useful during debugging or spam handling.",
          "required": true,
          "value": "-123456798"
+      },
+      "ARQ_API_KEY": {
+         "description": "For Some Modules. Get it from @ArqRobot",
+         "required": true,
+         "value": ""
+      },
+      "ARQ_API_URL": {
+         "description": "Uses For Arq Modules. Don't Change Anything Just Leave It.",
+         "required": true,
+         "value": "https://thearq.tech/"
       },      
       "CASH_API_KEY": {
          "description": "Required for currency converter. Get yours from https://www.alphavantage.co/support/#api-key",
