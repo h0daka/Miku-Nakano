@@ -38,11 +38,6 @@
          "description": "Your postgres sql db, empty this field if you dont have one.",
          "required": false,
          "value": "sqldbtype://username:pw@hostname:port/db_name"
-      },    
-      "REDIS_URL": {
-         "description": "Your redis Url get it from redislabs.com",
-         "required": true,
-         "value": "-xyz"
       },      
       "OWNER_ID": {
          "description": "Your user ID as an integer.",
