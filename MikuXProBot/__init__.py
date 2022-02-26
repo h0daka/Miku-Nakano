@@ -107,7 +107,6 @@ if ENV:
     HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", None)
     TELEGRAPH_SHORT_NAME = os.environ.get("TELEGRAPH_SHORT_NAME", "lightYagami")
     HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", None)
-    H0DAKA = os.environ.get("H0DAKA", None)
     BOT_NAME = os.environ.get("BOT_NAME", True) # Name Of your Bot.4
     BOT_USERNAME = os.environ.get("BOT_USERNAME", "") # Bot Username
     OPENWEATHERMAP_ID = os.environ.get("OPENWEATHERMAP_ID", "") # From:- https://openweathermap.org/api
@@ -188,7 +187,6 @@ else:
     SPAMWATCH_SUPPORT_CHAT = Config.SPAMWATCH_SUPPORT_CHAT
     SPAMWATCH_API = Config.SPAMWATCH_API
     INFOPIC = Config.INFOPIC
-    H0DAKA = Config.H0DAKA
     ARQ_API_URL = Config.ARQ_API_URL
     ARQ_API_KEY = Config.ARQ_API_KEY
     BOT_NAME = Config.BOT_NAME
