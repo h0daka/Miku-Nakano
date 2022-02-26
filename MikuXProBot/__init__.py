@@ -13,6 +13,7 @@ from telethon.sessions import StringSession
 from telethon import TelegramClient
 from aiohttp import ClientSession
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
+from MikuXProBot.__main__ import PM_START_TEXT
 
 StartTime = time.time()
 
@@ -261,3 +262,9 @@ BOT_ID = bottie.id
 BOT_USERNAME = bottie.username
 BOT_NAME = bottie.first_name
 BOT_MENTION = bottie.mention
+
+if "@MikuXProBot" not in PM_START_TEXT:
+    LOGGER.critical(f"{OWNER_ID} Is Cheating. Add `Thanks To @MikuXProBot For Repo` In PM_START_TEXT To Fix This")
+        sys.exit(2)
+else:
+    LOGGER.info("Your Bot Is Ready")
