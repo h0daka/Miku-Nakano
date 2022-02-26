@@ -11,14 +11,14 @@ MIKU_IMG = (
 TEXXT = "*Do you Like me?*"
 
 MIKU_N_IMG = (
-      "https://telegra.ph/file/0c8e327a8d5a4474ba465.jpg",
-      "https://telegra.ph/file/b3e9704345fb1c3fd7f69.jpg",
       "https://telegra.ph/file/2f143d0b23d50d17e8831.jpg",
+      "https://telegra.ph/file/b3e9704345fb1c3fd7f69.jpg",
+      "https://telegra.ph/file/db837c2f446f0b35cd60c.jpg",
       "https://telegra.ph/file/31d48e572fca0bbcc6a33.jpg",
       "https://telegra.ph/file/e16f77e2012915faf41c0.jpg"
 
 )
 
-PM_PHOTO = "https://telegra.ph/file/db837c2f446f0b35cd60c.jpg"
+PM_PHOTO = "https://telegra.ph/file/0c8e327a8d5a4474ba465.jpg"
 
 MIKU_DISPACHER_PIC = "https://telegra.ph/file/3676bc85e67412eac9ce6.jpg"
