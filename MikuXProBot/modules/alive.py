@@ -18,8 +18,8 @@ from pyrogram import __version__ as pyro
 
 edit_time = 5
 """ =======================CONSTANTS====================== """
-file1 = "https://telegra.ph/file/f1e9b94decb547cb45cab.jpg"
-file2 = "https://telegra.ph/file/c5b6c0a3a6832efc08e5b.jpg"
+file1 = "https://telegra.ph//file/0e1f0be793724af68e854.jpg"
+file2 = "https://telegra.ph//file/236bfe768cb5ff89e76b6.jpg"
 file3 = "https://telegra.ph/file/1dbcdedfc78d0318a288b.jpg"
 file4 = "https://telegra.ph/file/ac522b519f77a1054e9e9.jpg"
 """ =======================CONSTANTS====================== """
