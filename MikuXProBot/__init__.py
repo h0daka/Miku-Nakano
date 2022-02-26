@@ -13,7 +13,7 @@ from telethon.sessions import StringSession
 from telethon import TelegramClient
 from aiohttp import ClientSession
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
-from MikuXProBot.__main__ import PM_START_TEXT
+from MikuXProBot.script import PM_START_TEXT
 
 StartTime = time.time()
 
