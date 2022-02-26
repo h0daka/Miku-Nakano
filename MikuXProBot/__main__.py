@@ -223,10 +223,10 @@ def start(update: Update, context: CallbackContext):
                   [                  
                        InlineKeyboardButton(
                              text="Support🚑",
-                             url=f"https://t.me/MikusSupport"),
+                             url=f"https://t.me/tofu_support"),
                        InlineKeyboardButton(
                              text="Updates🛰️",
-                             url="https://t.me/MikuXUpdates")
+                             url="https://t.me/tofu_support")
                      ] 
                 ]
             ),
@@ -284,7 +284,7 @@ def help_button(update, context):
                 reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Back",
                                        callback_data="help_back"),
                   InlineKeyboardButton(text="Support",
-                                       url="t.me/Mikussupport")]]))
+                                       url="https://t.me/tofu_support")]]))
 
         elif prev_match:
             curr_page = int(prev_match.group(1))
@@ -331,19 +331,19 @@ def miku_callback_data(update, context):
                  \n❍ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc.
                  \n❍ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
                  \n❍ I check for admins' permissions before executing any command and more stuffs
-                 \n❍ Miku licensed under the GNU General Public License v3.0
-                 \n❍ If you have any question about Miku, let us know at [Miku Support](t.me/{SUPPORT_CHAT}).""",
+                 \n❍ Tofu licensed under the GNU General Public License v3.0
+                 \n❍ If you have any question about TOFU, let us know at [TOFU Support](t.me/{SUPPORT_CHAT}).""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="My Master 🌏", url="t.me/h0daka"),
+                    InlineKeyboardButton(text="My Master 🌏", url="t.me/awakened_adi"),
                     InlineKeyboardButton(text="Try Inline ✨", switch_inline_query_current_chat="",),
                  ],
                  [
-                    InlineKeyboardButton(text="Updates 🕊️", url="t.me/MikuXUpdates"),
-                    InlineKeyboardButton(text="Support 🚑", url="t.me/Mikussupport"),
+                    InlineKeyboardButton(text="Updates 🕊️", url="t.me/tofu_support"),
+                    InlineKeyboardButton(text="Support 🚑", url="t.me/tofu_support"),
                  ],
                  [
                     InlineKeyboardButton(text="Back ❌", callback_data="miku_back")
@@ -408,7 +408,7 @@ def get_help(update: Update, context: CallbackContext):
                 [[InlineKeyboardButton(text="Back",
                                        callback_data="help_back"),
                   InlineKeyboardButton(text="Support",
-                                       url="t.me/Mikussupport")]]))
+                                       url="t.me/tofu_support")]]))
 
     else:
         send_help(chat.id, HELP_STRINGS)
@@ -607,14 +607,14 @@ def main():
                   [                  
                        InlineKeyboardButton(
                              text="[► Summon Me◄]",
-                             url="https://t.me/MikuXProBot?startgroup=true")
+                             url="https://t.me/TofuXRobot?startgroup=true")
                      ] 
                 ]
             ),
         ) 
         except Unauthorized:
             LOGGER.warning(
-                "Miku can't able to send message to support_chat, go and check!")
+                "Tofu can't able to send message to support_chat, go and check!")
         except BadRequest as e:
             LOGGER.warning(e.message)
 
@@ -657,7 +657,7 @@ def main():
             updater.bot.set_webhook(url=URL + TOKEN)
 
     else:
-        LOGGER.info("Finally Miku Is In Online")
+        LOGGER.info("Finally Tofu Is In Online")
         updater.start_polling(timeout=15, read_latency=4, drop_pending_updates=True, allowed_updates=Update.ALL_TYPES)
 
     if len(argv) not in (1, 3, 4):
