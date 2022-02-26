@@ -7,6 +7,7 @@ import aiohttp
 
 import telegram.ext as tg
 from redis import StrictRedis
+from Python_ARQ import ARQ
 from pyrogram import Client, errors
 from telethon.sessions import StringSession
 from telethon import TelegramClient
@@ -125,7 +126,7 @@ if ENV:
             "Your blacklisted chats list does not contain valid integers.")
     
 else:
-    from Miku.config import Development as Config
+    from MikuXProBot.config import Development as Config
     TOKEN = Config.TOKEN
 
     try:
@@ -217,31 +218,16 @@ if not SPAMWATCH_API:
 else:
     sw = spamwatch.Client(SPAMWATCH_API)
 
+session_name = TOKEN.split(":")[0]
+pgram = Client(session_name, api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
+
 #install aiohttp session
 print("Scanning AIO http session")
 aiohttpsession = ClientSession() 
 
-REDIS = StrictRedis.from_url(REDIS_URL, decode_responses=True)
-
-try:
-
-    REDIS.ping()
-
-    LOGGER.info("Connecting To Redis Database")
-
-except BaseException:
-
-    raise Exception("[ERROR]: Your Redis Database Is Not Alive, Please Check Again.")
-
-finally:
-
-   REDIS.ping()
-
-   LOGGER.info("Redis Database Successfully! Connected")
-
 #install arq
 print("Connecting ARQ Client")
-arq = (ARQ_API_URL, ARQ_API_KEY, aiohttpsession)
+arq = ARQ(ARQ_API_URL, ARQ_API_KEY, aiohttpsession)
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 telethn = TelegramClient("Miku", API_ID, API_HASH)
 mongo_client = MongoClient(MONGO_DB_URI)
@@ -264,4 +250,14 @@ tg.RegexHandler = CustomRegexHandler
 tg.CommandHandler = CustomCommandHandler
 tg.MessageHandler = CustomMessageHandler
 
-pgram = Client("Miku", bot_token=TOKEN, api_id=API_ID, api_hash=API_HASH)
+print("Connecting Pyrogram Client")
+pgram.start()
+
+print("Checking Errors")
+
+bottie = pgram.get_me()
+
+BOT_ID = bottie.id
+BOT_USERNAME = bottie.username
+BOT_NAME = bottie.first_name
+BOT_MENTION = bottie.mention
