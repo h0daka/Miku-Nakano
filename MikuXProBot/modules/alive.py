@@ -86,4 +86,4 @@ async def hmm(yes):
 async def repo(event):
     Miku = f"**Hey [{event.sender.first_name}](tg://user?id={event.sender.id}), Click The Button Below To Get My Repo**\n\n"
     BUTTON = [[Button.url("[► Support ◄]", "https://t.me/MikusSupport"), Button.url("[► Repo ◄]", "https://github.com/h0daka/Miku-Nakano")]]
-    await borg.send_file(event.chat_id, file="https://telegra.ph/file/c5b6c0a3a6832efc08e5b.jpg", caption=Miku, buttons=BUTTON)
+    await borg.send_file(event.chat_id, file="https://telegra.ph/file/0f41f734003d3b24d81ef.jpg", caption=Miku, buttons=BUTTON)
