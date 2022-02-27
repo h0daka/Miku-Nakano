@@ -48,7 +48,7 @@ from MikuXProBot.modules.helper_funcs.chat_status import sudo_plus
 from MikuXProBot.modules.helper_funcs.extraction import extract_user
 from MikuXProBot import telethn
 
-MIKU_IMG = "https://telegra.ph/file/e3be4035a03c7ecb6b24e.jpg"
+MIKU_IMG = "https://telegra.ph/file/4a4503e7b45770db6cb3d.jpg"
 
 def no_by_per(totalhp, percentage):
     """
@@ -240,10 +240,10 @@ def info(update: Update, context: CallbackContext):
     [
                         InlineKeyboardButton(
                              text="Health",
-                             url="https://t.me/MikuXproBot?start=health"),
+                             url="https://t.me/TofuXRobot?start=health"),
                        InlineKeyboardButton(
                              text="Disasters",
-                             url="https://t.me/MikuXproBot?start=disasters"),
+                             url="https://t.me/TofuXRobot?start=disasters"),
                     ],
     ]
     user_id = extract_user(update.effective_message, args)
@@ -491,7 +491,7 @@ def stats(update, context):
                     )
                     + f"\n\n✦ [Support](https://t.me/{SUPPORT_CHAT}) | ✦ [Updates](https://t.me/MikuXUpdates)\n\n"
                 )
-                + "╘══「 by [卄σ∂αкα](https://t.me/h0daka) 」\n"
+                + "╘══「 by [💜「 𝐓𝐨𝐟𝐮™ 」💜 °•♡왕자♡•°](https://t.me/awakened_adi) 」\n"
             ),
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
