@@ -469,7 +469,7 @@ def stats(update, context):
             + "\n*Bot statistics*:\n"
             + "\n".join([mod.__stats__() for mod in STATS])
             + f"\n\n[✦ Support](https://t.me/{SUPPORT_CHAT}) | [✦ Updates](https://t.me/MikuXUpdates)\n\n"
-            + "\n╘══「 by [卄σ∂αкα](https://t.me/h0daka) 」\n",
+            + "\n╘══「 by [💜「 𝐓𝐨𝐟𝐮™ 」💜 °•♡왕자♡•°](https://t.me/awakened_adi) 」\n",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
