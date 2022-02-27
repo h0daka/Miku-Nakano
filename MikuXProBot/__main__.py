@@ -210,12 +210,7 @@ def start(update: Update, context: CallbackContext):
         id = update.effective_user.id
         chat = update.effective_chat.title
         update.effective_message.reply_photo(
-                random.choice(MIKU_IMG), TEXXT.format(
-                first,
-                id,
-                chat,
-                uptime
-            ),
+                random.choice(MIKU_IMG), caption=TEXXT,
 
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
