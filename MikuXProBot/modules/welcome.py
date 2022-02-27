@@ -61,10 +61,10 @@ ENUM_FUNC_MAP = {
 
 VERIFIED_USER_WAITLIST = {}
 
-MIKU_IMG = "https://telegra.ph/file/be3430b7151fd64706679.mp4"
-MIKU = "https://telegra.ph/file/25442c7b0b61372df7ce9.jpg"
-MIKU_VID = "https://telegra.ph/file/e997d98975496adc09fe7.mp4"
-WAIFUS_IMG = "https://telegra.ph/file/a6c91884e06744ad48fb7.jpg"
+MIKU_IMG = "https://telegra.ph/file/5ccc8d004d25802e83837.mp4"
+MIKU = "https://telegra.ph/file/2ed124ac610af24f93fb4.mp4"
+MIKU_VID = "https://telegra.ph/file/f1fd3d7fdca93e6ffca10.mp4"
+WAIFUS_IMG = "https://telegra.ph/file/4f2591240a54298f83a0e.mp4"
 
 
 # do not async
@@ -243,7 +243,7 @@ def new_member(update: Update, context: CallbackContext):
                   [                  
                        InlineKeyboardButton(
                              text="Support🚑",
-                             url=f"https://t.me/MikusSupport"),
+                             url=f"https://t.me/tofu_support"),
                        InlineKeyboardButton(
                              text="Updates🛰️",
                              url="https://t.me/CrowdXStrike")
