@@ -206,9 +206,6 @@ def start(update: Update, context: CallbackContext):
                 timeout=60,
             )
     else:
-        first = update.effective_user.first_name
-        id = update.effective_user.id
-        chat = update.effective_chat.title
         update.effective_message.reply_photo(
                 random.choice(MIKU_IMG), TEXXT,
             parse_mode=ParseMode.MARKDOWN,
