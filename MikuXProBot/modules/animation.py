@@ -108,12 +108,17 @@ love_siren = [
 
 
 hack_you = [
-    "Looking for WhatsApp databases in targeted person...",
-    " User online: True\nTelegram access: True\nRead Storage: True ",
-    "Hacking... 20.63%\n[███░░░░░░░░░░░░░░░░░]",
-    "Hacking... 86.21%\n[███████████████░░░░░]",
-    "Hacking... 93.50%\n[█████████████████░░░]",
-    "hacking....  100%\n[████████████████████]",
+    "`Installing Files To Hacked Private Server...`",
+        "`Target Selected.`",
+        "`Installing... 0%\n▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
+        "`Installing... 4%\n█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
+        "`Installing... 8%\n██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
+        "`lnstallig... 20%\n█████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
+        "`Installing... 36%\n█████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
+        "`Installing... 52%\n█████████████▒▒▒▒▒▒▒▒▒▒▒▒ `",
+        "`Installing... 84%\n█████████████████████▒▒▒▒ `",
+        "`Installing... 100%\n████████Installed██████████ `",
+        "`Target files Uploading...\n\nDirecting To Remote  server to hack..`",
 ]
 
 
