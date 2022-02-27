@@ -23,7 +23,7 @@ EDIT_TIMES = 9
 # sleep how many times after each edit in 'hack'
 EDIT_SLEEP = 1
 # edit how many times in 'hack'
-EDIT_TIMES = 10
+EDIT_TIMES = 100
 
 
 # sleep how many times after each edit in 'earthanimation'
