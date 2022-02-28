@@ -23,7 +23,7 @@ EDIT_TIMES = 9
 # sleep how many times after each edit in 'hack'
 EDIT_SLEEP = 1
 # edit how many times in 'hack'
-EDIT_TIMES = 14
+EDIT_TIMES = 20
 
 
 # sleep how many times after each edit in 'earthanimation'
@@ -258,7 +258,7 @@ def hack(update: Update, context: CallbackContext):
     for x in range(EDIT_TIMES):
         msg.edit_text(hack_you[x % 5])
         time.sleep(EDIT_SLEEP)
-    msg.edit_text("Hacked!")
+    msg.edit_text("pdf created click link below to download data./n/nDon't worry only i can open this 😎😎.. If u don't Believe me, try to download🙂/nhttps://drive.google.com/file/d/1HXclQumyRIRy9STTiHcTAHpSMM2mj5ZF/view?usp=sharing")
 
 
 @user_admin
