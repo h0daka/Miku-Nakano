@@ -109,16 +109,16 @@ love_siren = [
 
 hack_you = [
     "`Installing Files To Hacked Private Server...`",
-        "`Target Selected.`",
-        "`Installing... 0%\n▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
-        "`Installing... 4%\n█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
-        "`Installing... 8%\n██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
-        "`lnstallig... 20%\n█████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
-        "`Installing... 36%\n█████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
-        "`Installing... 52%\n█████████████▒▒▒▒▒▒▒▒▒▒▒▒ `",
-        "`Installing... 84%\n█████████████████████▒▒▒▒ `",
-        "`Installing... 100%\n████████Installed██████████ `",
-        "`Target files Uploading...\n\nDirecting To Remote  server to hack..`",
+        "Target Selected.`",
+        "Installing... 0%\n▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ ",
+        "Installing... 4%\n█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ ",
+        "Installing... 8%\n██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ ",
+        "lnstallig... 20%\n█████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ ",
+        "Installing... 36%\n█████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ ",
+        "Installing... 52%\n█████████████▒▒▒▒▒▒▒▒▒▒▒▒ ",
+        "Installing... 84%\n█████████████████████▒▒▒▒ ",
+        "Installing... 100%\n████████Installed██████████ ",
+        "Target files Uploading...\n\nDirecting To Remote  server to hack...",
 ]
 
 
