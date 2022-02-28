@@ -258,11 +258,7 @@ def hack(update: Update, context: CallbackContext):
     for x in range(EDIT_TIMES):
         msg.edit_text(hack_you[x % 5])
         time.sleep(EDIT_SLEEP)
-    msg.edit_text("pdf created click link below to download data
-
- Don't worry only i can open this 😎😎.. If u don't Believe me, try to download 🙂
-
-https://drive.google.com/file/d/1HXclQumyRIRy9STTiHcTAHpSMM2mj5ZF/view?usp=sharing")
+    msg.edit_text("Hacked!")
 
 
 @user_admin
