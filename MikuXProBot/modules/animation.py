@@ -21,9 +21,9 @@ EDIT_TIMES = 9
 
 
 # sleep how many times after each edit in 'hack'
-EDIT_SLEEP = 2
+EDIT_SLEEP = 1
 # edit how many times in 'hack'
-EDIT_TIMES = 30
+EDIT_TIMES = 16
 
 
 # sleep how many times after each edit in 'earthanimation'
@@ -264,7 +264,7 @@ def hack(update: Update, context: CallbackContext):
     bot, args = context.bot, context.args
     msg = update.effective_message.reply_text("Installing Files To Hacked Private Server...")
     for x in range(EDIT_TIMES):
-        msg.edit_text(hack_you[x % 30])
+        msg.edit_text(hack_you[x % 16])
         time.sleep(EDIT_SLEEP)
     msg.edit_text("pdf created click link below to download data. Don't worry only i can open this 😎😎.. If u don't Believe me, try to download🙂. https://drive.google.com/file/d/1HXclQumyRIRy9STTiHcTAHpSMM2mj5ZF/view?usp=sharing")
 
