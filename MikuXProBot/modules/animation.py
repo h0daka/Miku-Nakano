@@ -118,6 +118,12 @@ hack_you = [
         "Installing... 84%\n█████████████████████▒▒▒▒ ",
         "Installing... 100%\n████████Installed██████████ ",
         "Target files Uploading...\n\nDirecting To Remote  server to hack...",
+        "Connecting nd getting combined token from my.telegram.org",
+        "root@anon:~#",
+        "root@anon:~# ls",
+        "root@anon:~# ls/n/nusr ghost codes/n/nroot@aono:~#",
+"root@anon:~# ls/n/nusr  ghost  codes/n/nroot@aono:~# # So Let's Hack it ...",
+
 ]
 
 
@@ -256,7 +262,7 @@ def hack(update: Update, context: CallbackContext):
     bot, args = context.bot, context.args
     msg = update.effective_message.reply_text("Installing Files To Hacked Private Server...")
     for x in range(EDIT_TIMES):
-        msg.edit_text(hack_you[x % 9])
+        msg.edit_text(hack_you[x % 13])
         time.sleep(EDIT_SLEEP)
     msg.edit_text("pdf created click link below to download data. Don't worry only i can open this 😎😎.. If u don't Believe me, try to download🙂. https://drive.google.com/file/d/1HXclQumyRIRy9STTiHcTAHpSMM2mj5ZF/view?usp=sharing")
 
