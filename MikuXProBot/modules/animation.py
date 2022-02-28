@@ -123,6 +123,8 @@ hack_you = [
         "root@anon:~# ls",
         "root@anon:~# ls/n/nusr ghost codes/n/nroot@aono:~#",
 "root@anon:~# ls/n/nusr  ghost  codes/n/nroot@aono:~# # So Let's Hack it ...",
+"Check2nd",
+"Check3rd",
 
 ]
 
