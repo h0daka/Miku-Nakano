@@ -48,7 +48,7 @@ from MikuXProBot.modules.helper_funcs.chat_status import sudo_plus
 from MikuXProBot.modules.helper_funcs.extraction import extract_user
 from MikuXProBot import telethn
 
-MIKU_IMG = "https://telegra.ph/file/4a4503e7b45770db6cb3d.jpg"
+MIKU_IMG = "https://telegra.ph/file/1365bb6359279dd4ce42e.jpg"
 
 def no_by_per(totalhp, percentage):
     """
@@ -491,7 +491,7 @@ def stats(update, context):
                     )
                     + f"\n\n✦ [Support](https://t.me/{SUPPORT_CHAT}) | ✦ [Updates](https://t.me/MikuXUpdates)\n\n"
                 )
-                + "╘══「 by [💜「 𝐓𝐨𝐟𝐮™ 」💜 °•♡왕자♡•°](https://t.me/awakened_adi) 」\n"
+                + "╘══「 by [卄σ∂αкα](https://t.me/h0daka) 」\n"
             ),
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
