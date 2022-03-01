@@ -59,8 +59,8 @@ def inlinequery(update: Update, _) -> None:
         },
         {
             "title": "Account info on Tofu",
-            "description": "Look up a Telegram account in Miku database",
-            "message_text": "Click the button below to look up a person in Miku database using their Telegram ID",
+            "description": "Look up a Telegram account in Tofu database",
+            "message_text": "Click the button below to look up a person in Tofu database using their Telegram ID",
             "thumb_urL": "https://telegra.ph/file/962b4b8f29edec667b447.jpg",
             "keyboard": ".info ",
         },
@@ -243,7 +243,7 @@ def about(query: str, update: Update, context: CallbackContext) -> None:
     user = context.bot.get_chat(user_id)
     sql.update_user(user.id, user.username)
     about_text = f"""
-    [Miku ❤️](https://t.me/TofuXRoBot)\n*Bot State:* `Alive`\n*Python:* `{python_version()}`\n*Pyrogram:* `{pyrover}`\n*Platform:* `{sys.platform}`\n*python-telegram-bot:* `v{str(__version__)}`
+    [Tofu ❤️](https://t.me/TofuXRoBot)\n*Bot State:* `Alive`\n*Python:* `{python_version()}`\n*Pyrogram:* `{pyrover}`\n*Platform:* `{sys.platform}`\n*python-telegram-bot:* `v{str(__version__)}`
     """
     results: list = []
     kb = InlineKeyboardMarkup(
