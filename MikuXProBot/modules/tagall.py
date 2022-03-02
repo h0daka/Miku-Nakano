@@ -10,7 +10,7 @@ async def tagall(client, message):
     await message.reply("`Processing.....`")
     sh = get_text(message)
     if not sh:
-        sh = f"This Is An Testing Tagall By {message.from_user.mention}!"
+        sh = f"This Is Testing Tagall By {message.from_user.mention}!"
     mentions = ""
     async for member in client.iter_chat_members(message.chat.id):
         mentions += member.user.mention + " "
