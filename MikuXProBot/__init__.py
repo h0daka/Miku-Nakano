@@ -226,7 +226,6 @@ arq = ARQ(ARQ_API_URL, ARQ_API_KEY, aiohttpsession)
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 telethn = TelegramClient("Miku", API_ID, API_HASH)
 mongo_client = MongoClient(MONGO_DB_URI)
-db = mongo_client.Miku
 dispatcher = updater.dispatcher
 
 DRAGONS = list(DRAGONS) + list(DEV_USERS)
