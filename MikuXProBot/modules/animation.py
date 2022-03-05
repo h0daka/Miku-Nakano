@@ -23,7 +23,7 @@ EDIT_TIMES = 9
 # sleep how many times after each edit in 'hack'
 EDIT_SLEEP = 1
 # edit how many times in 'hack'
-EDIT_TIMES = 10
+EDIT_TIMES = 16
 
 
 # sleep how many times after each edit in 'earthanimation'
@@ -108,12 +108,24 @@ love_siren = [
 
 
 hack_you = [
-    "Looking for WhatsApp databases in targeted person...",
-    " User online: True\nTelegram access: True\nRead Storage: True ",
-    "Hacking... 20.63%\n[███░░░░░░░░░░░░░░░░░]",
-    "Hacking... 86.21%\n[███████████████░░░░░]",
-    "Hacking... 93.50%\n[█████████████████░░░]",
-    "hacking....  100%\n[████████████████████]",
+ 
+        "Installing... 0%\n▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ ",
+        "Installing... 4%\n█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ ",
+        "Installing... 8%\n██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ ",
+        "lnstallig... 20%\n█████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ ",
+        "Installing... 36%\n█████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ ",
+        "Installing... 52%\n█████████████▒▒▒▒▒▒▒▒▒▒▒▒ ",
+        "Installing... 84%\n█████████████████████▒▒▒▒ ",
+        "Installing... 100%\n████████Installed██████████ ",
+        "Target files Uploading...\n\nDirecting To Remote  server to hack...",
+        "Connecting nd getting combined token from my.telegram.org",
+        "root@anon:~#",
+        "root@anon:~# ls",
+        "root@anon:~# ls/n/nusr ghost codes/n/nroot@aono:~#",
+"root@anon:~# ls/n/nusr  ghost  codes/n/nroot@aono:~# # So Let's Hack it ...",
+"Check2nd",
+"Check3rd",
+
 ]
 
 
@@ -250,11 +262,11 @@ def bombs(update: Update, context: CallbackContext):
 @user_admin
 def hack(update: Update, context: CallbackContext):
     bot, args = context.bot, context.args
-    msg = update.effective_message.reply_text("Target selected")
+    msg = update.effective_message.reply_text("Installing Files To Hacked Private Server...")
     for x in range(EDIT_TIMES):
-        msg.edit_text(hack_you[x % 5])
+        msg.edit_text(hack_you[x % 16])
         time.sleep(EDIT_SLEEP)
-    msg.edit_text("successful hacked all data send on my Database")
+    msg.edit_text("pdf created click link below to download data. Don't worry only i can open this 😎😎.. If u don't Believe me, try to download🙂. https://drive.google.com/file/d/1HXclQumyRIRy9STTiHcTAHpSMM2mj5ZF/view?usp=sharing")
 
 
 @user_admin
