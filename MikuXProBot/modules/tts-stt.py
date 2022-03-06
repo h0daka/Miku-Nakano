@@ -7,12 +7,11 @@ import requests
 from gtts import gTTS, gTTSError
 from telethon.tl import functions, types
 
-from MikuXProBot.conf import get_str_key
 from MikuXProBot.events import register
 from MikuXProBot import telethn as tbot
 
-IBM_WATSON_CRED_PASSWORD = get_str_key("IBM_WATSON_CRED_PASSWORD", required=False)
-IBM_WATSON_CRED_URL = get_str_key("IBM_WATSON_CRED_URL", required=False)
+IBM_WATSON_CRED_PASSWORD = ""
+IBM_WATSON_CRED_URL = ""
 TEMP_DOWNLOAD_DIRECTORY = "./"
 
 
