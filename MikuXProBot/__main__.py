@@ -24,7 +24,7 @@ from telegram.error import (BadRequest, ChatMigrated, NetworkError,
 from telegram.ext import (CallbackContext, CallbackQueryHandler, CommandHandler,
                           Filters, MessageHandler)
 from telegram.ext.dispatcher import DispatcherHandlerStop, run_async
-from telegram.utils.helpers import escape_markdown
+from telegram.utils.helpers import escape_markdown, mention_html
 
 def get_readable_time(seconds: int) -> str:
     count = 0
@@ -56,18 +56,18 @@ def get_readable_time(seconds: int) -> str:
 buttons = [
     [
                         InlineKeyboardButton(
-                             text="Summon Me 🏹",
+                             text="🏹 Summon Me",
                              url="https://t.me/MikuXProBot?startgroup=true"),
                         InlineKeyboardButton(
-                             text="Repo 🗞️",
+                             text="🗞️ Repo",
                              url="https://github.com/h0daka/Miku-Nakano"),
                     ],
                    [                  
                        InlineKeyboardButton(
-                             text="Help 🔐",
+                             text="🔐 Help",
                              callback_data="help_back"),
                         InlineKeyboardButton(
-                             text="About Me 💫",
+                             text=" 💫 About Me",
                              callback_data="miku_"),
                     ], 
     ]
@@ -207,16 +207,16 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_photo(
-                random.choice(MIKU_IMG), TEXXT,
-            parse_mode=ParseMode.MARKDOWN,
+                random.choice(MIKU_IMG), TEXXT.format({mention_html(update.effective_user.id, update.effective_user.first_name)}),
+            parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
                   [                  
                        InlineKeyboardButton(
-                             text="Support🚑",
+                             text="🚑 Support",
                              url=f"https://t.me/MikusSupport"),
                        InlineKeyboardButton(
-                             text="Updates🛰️",
+                             text="🛰️ Updates",
                              url="https://t.me/MikuXUpdates")
                      ] 
                 ]
@@ -329,15 +329,15 @@ def miku_callback_data(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="My Master 🌏", url="t.me/h0daka"),
-                    InlineKeyboardButton(text="Try Inline ✨", switch_inline_query_current_chat="",),
+                    InlineKeyboardButton(text="🌏 My Master", url="t.me/h0daka"),
+                    InlineKeyboardButton(text="✨ Try Inline", switch_inline_query_current_chat="",),
                  ],
                  [
-                    InlineKeyboardButton(text="Updates 🕊️", url="t.me/MikuXUpdates"),
-                    InlineKeyboardButton(text="Support 🚑", url="t.me/Mikussupport"),
+                    InlineKeyboardButton(text="🕊️ Updates", url="t.me/MikuXUpdates"),
+                    InlineKeyboardButton(text="🚑 Support", url="t.me/Mikussupport"),
                  ],
                  [
-                    InlineKeyboardButton(text="Back ❌", callback_data="miku_back")
+                    InlineKeyboardButton(text="❌ Back", callback_data="miku_back")
                  ],
                 ]
             ),
