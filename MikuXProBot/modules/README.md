@@ -1,6 +1,6 @@
 # Miku Example plugin format
 
-## Basic: Decorators
+## Advanced: Decorators
 ```python3
 
 from MikuXProBot.modules.helper_funcs.decorators import mikucmd
