@@ -12,7 +12,7 @@ import aiohttp
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
-from KURUMIBOT import pgram
+from MikuXProBot import pgram
 
 session = aiohttp.ClientSession()
 progress_callback_data = {}
