@@ -8,7 +8,7 @@ from telegram import Update
 from telegram.ext import CallbackContext
 
 @mikucmd(command='hi', pass_args=True)
-def hello(update: Update, context: CallbackContext) -> str:
+def hello(update: Update, context: CallbackContext):
     message = update.effective_message
     message.reply_text("hello")
 
