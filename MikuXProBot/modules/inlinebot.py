@@ -540,9 +540,10 @@ async def stats_callbacc(_, CallbackQuery):
     text = await bss()
     await pgram.answer_callback_query(CallbackQuery.id, text, show_alert=True)
 
-def _netcat(host, port, content):
+def _netcat(host, port, update: Update, context: CallbackContext):
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.connect((host, int(port)))
+    content = update.inline_query.query.split(" ", 1)[1]
     s.sendall(content.encode())
     s.shutdown(socket.SHUT_WR)
     while True:
@@ -552,8 +553,8 @@ def _netcat(host, port, content):
         return data
     s.close()
 
-def paste(content):
-    link = _netcat("ezup.dev", 9999, content)
+def paste(update: Update, context: CallbackContext):
+    link = _netcat("ezup.dev", 9999,  update.inline_query.query.split(" ", 1)[1])
     return link
 
 def paste_func(query: str, update: Update, context: CallbackContext) -> None:
