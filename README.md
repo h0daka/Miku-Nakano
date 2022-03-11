@@ -34,9 +34,9 @@
 ### ╒═══「 Creator Info/Credits 」
 
 + ➢ [Hodaka](https://github.com/h0daka) : OWNER | DEV
-+ ➢ [CutiepiiRobot](https://github.com/Awesome-RJ/CutiepiiRobot) Repo : SOME MODULES
-+ ➢ [KURUMIBOT](https://github.com/Hirojazz/kurumi) Repo : BASE
-+ ➢ [Kigyō](https://github.com/AnimeKaizoku/EnterpriseALRobot) Repo : SOME MODULES 
++ ➢ [Rajkumar](https://github.com/Awesome-RJ) : BASE
++ ➢ [Hirojazz](https://github.com/Hirojazz) : BASE
++ ➢ [Dank-del](https://github.com/Dank-del) : BASE 
 
 ╘══「 Any other authorship/credits can be seen through the commits. 」
 
