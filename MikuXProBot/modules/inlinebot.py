@@ -565,7 +565,7 @@ def paste_func(query: str, update: Update, context: CallbackContext) -> None:
     url = paste(text)
     msg = f"__**{url}**__"
     end_time = time()
-    results: list = []
+    results: List = []
 
     results.append(
         InlineQueryResultArticle(
