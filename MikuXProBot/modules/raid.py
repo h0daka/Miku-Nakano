@@ -14,7 +14,7 @@ from .helper_funcs.chat_status import bot_admin, connection_status, user_admin_n
 from .helper_funcs.decorators import mikucmd, mikucallback
 from .. import LOGGER, updater
 
-import tg_bot.modules.sql.welcome_sql as sql
+import MikuXProBot.modules.sql.welcome_sql as sql
 
 j = updater.job_queue
 
