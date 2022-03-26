@@ -148,8 +148,7 @@ def new_member(update: Update, context: CallbackContext):
     should_welc, cust_welcome, cust_content, welc_type = sql.get_welc_pref(
         chat.id)
     welc_mutes = sql.welcome_mutes(chat.id)
-    human_checks = sql.get_human_checks(user.id, chat.id)
-
+    raid, _, deftime = sql.getRaidStatus(str(chat.id))
     new_members = update.effective_message.new_chat_members
 
     for new_mem in new_members:
@@ -160,6 +159,14 @@ def new_member(update: Update, context: CallbackContext):
         should_mute = True
         welcome_bool = True
         media_wel = False
+
+        if raid and new_mem.id not in TIGERS:
+            bantime = deftime
+            try:
+                chat.ban_member(new_mem.id, until_date=bantime)
+                return
+            except:
+                pass
 
         if sw is not None:
             sw_ban = sw.get_ban(new_mem.id)
