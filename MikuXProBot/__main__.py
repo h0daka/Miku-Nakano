@@ -323,7 +323,7 @@ def miku_callback_data(update, context):
                  \n❍ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
                  \n❍ I check for admins' permissions before executing any command and more stuffs
                  \n❍ Miku licensed under the GNU General Public License v3.0
-                 \n❍ If you have any question about Miku, let us know at [Miku Support](t.me/{SUPPORT_CHAT}).""",
+                 \n❍ If you have any question about SHU, let us know at [SHU KURENAI Support](t.me/{SHUKURENAI_SUPPORT}).""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -592,7 +592,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.send_message(f"@{SUPPORT_CHAT}", f"[I'm In Online]({MIKU_DISPACHER_PIC})", parse_mode=ParseMode.MARKDOWN,
+            dispatcher.bot.send_message(f"@{SHUKURENAI_SUPPORT}", f"[I'm In Online]({MIKU_DISPACHER_PIC})", parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                   [                  
