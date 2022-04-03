@@ -1,4 +1,4 @@
-PM_START_TEXT = """────「 [{}]({}) 」────\n*Hello {}!*\n*I'm An Anime Themed Advance Group Management Bot*\n\n❍ *Uptime:* `{}`\n❍ `{}` *Users, Across* `{}` *Chats*\n\n*Click The Help Button To Get List Of My Commands.*\nThanks To @MikuXProBot For Repo"""
+PM_START_TEXT = """────「 [{}]({}) 」────\n*Hello {}!*\n*I'm An Anime Themed Advance Group Management Bot*\n\n❍ *Uptime:* `{}`\n❍ `{}` *Users, Across* `{}` *Chats*\n\n*Click The Help Button To Get List Of My Commands.*\nThanks To @ShukurenaiPRobot For Repo"""
 
 MIKU_IMG = (
       "https://telegra.ph/file/3f06de01df5bc3c3cf343.jpg",
@@ -19,6 +19,6 @@ MIKU_N_IMG = (
 
 )
 
-PM_PHOTO = "https://telegra.ph//file/3a88a958a88e83d85d284.jpg"
+PM_PHOTO = "https://telegra.ph/file/22ac71072f47479be9987.jpg"
 
 MIKU_DISPACHER_PIC = "https://telegra.ph//file/4ce99db6136c77248e0ec.jpg"
