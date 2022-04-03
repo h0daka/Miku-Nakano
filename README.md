@@ -1,4 +1,4 @@
-![Miku](https://telegra.ph/file/bc219808c6d888fc72260.jpg)
+![shu](http://telegra.ph/file/e00c4150c35f27521a32d.jpg)
 # 𝓜𝓲𝓴𝓾 𝓝𝓪𝓴𝓪𝓷𝓸
 <h3 align="center"> 
     A Modular Telegram Python Bot Running On Python3 With Mongo DB, Sqlalchemy, Redis Database.
@@ -29,7 +29,7 @@
 
 ╘══「 Can be found on telegram as [Miku Nakano](https://t.me/Mikuxprobot) 」
 
-![Miku](https://telegra.ph/file/9d78988131658606a3d57.jpg)
+![shu](http://telegra.ph/file/e00c4150c35f27521a32d.jpg)
 
 ### ╒═══「 Creator Info/Credits 」
 
@@ -57,7 +57,7 @@ The Easiest Way to Deploy This Bot is Via Heroku.
 	
   <h1>
     <p align="center">
-        <a href="https://heroku.com/deploy?template=https://github.com/h0daka/Miku-Nakano">
+        <a href="https://heroku.com/deploy?template=https://github.com/Sivatheboss88/ShukurenaiPRobot">
             <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
         </a>
     </p>
