@@ -2,11 +2,15 @@ import html
 import random
 import re
 import time
+import math
+from PIL import Image, ImageDraw, ImageFont
+import importlib
 from functools import partial
-
+from pyrogram import Client , filters
+from pyrogram.types import Message
 import MikuXProBot.modules.sql.welcome_sql as sql
 from MikuXProBot import (DEV_USERS, LOGGER, OWNER_ID, DRAGONS, DEMONS, TIGERS,
-                          WOLVES, sw, dispatcher, JOIN_LOGGER)
+                          WOLVES, sw, dispatcher, JOIN_LOGGER, pgram)
 from MikuXProBot.modules.helper_funcs.chat_status import (
     is_user_ban_protected,
     user_admin,
@@ -36,6 +40,8 @@ from telegram.ext import (
     run_async,
 )
 from telegram.utils.helpers import escape_markdown, mention_html, mention_markdown
+from MikuXProBot.modules.helper_funcs.misc import paginate_modules
+from MikuXProBot.modules import ALL_MODULES
 
 VALID_WELCOME_FORMATTERS = [
     "first",
@@ -148,6 +154,7 @@ def new_member(update: Update, context: CallbackContext):
     should_welc, cust_welcome, cust_content, welc_type = sql.get_welc_pref(
         chat.id)
     welc_mutes = sql.welcome_mutes(chat.id)
+    human_checks = sql.get_human_checks(user.id, chat.id)
     raid, _, deftime = sql.getRaidStatus(str(chat.id))
     new_members = update.effective_message.new_chat_members
 
@@ -250,14 +257,19 @@ def new_member(update: Update, context: CallbackContext):
                   [                  
                        InlineKeyboardButton(
                              text="Support🚑",
-                             url=f"https://t.me/MikusSupport"),
+                             url=f"https://t.me/MikuXSupport"),
                        InlineKeyboardButton(
                              text="Updates🛰️",
-                             url="https://t.me/CrowdXStrike")
-                     ] 
-                ]
-            ),
-        )
+                             url="https://t.me/MikuXUpdates")
+                     ],
+                     [                  
+                       InlineKeyboardButton(
+                             text="Help 💡",
+                             callback_data="help_back"),
+                ] 
+            ]
+        ),
+    )
                 continue
 
             else:
@@ -282,7 +294,7 @@ def new_member(update: Update, context: CallbackContext):
                             f"{first_name} {new_mem.last_name}")
                     else:
                         fullname = escape_markdown(first_name)
-                    count = chat.get_members_count()
+                    count = chat.get_member_count()
                     mention = mention_markdown(new_mem.id,
                                                escape_markdown(first_name))
                     if new_mem.username:
@@ -529,7 +541,7 @@ def left_member(update: Update, context: CallbackContext):
                         f"{first_name} {left_mem.last_name}")
                 else:
                     fullname = escape_markdown(first_name)
-                count = chat.get_members_count()
+                count = chat.get_member_count()
                 mention = mention_markdown(left_mem.id, first_name)
                 if left_mem.username:
                     username = "@" + escape_markdown(left_mem.username)
@@ -1020,6 +1032,80 @@ def __chat_settings__(chat_id, user_id):
             "It's goodbye preference is `{}`.".format(welcome_pref,
                                                       goodbye_pref))
 
+HELPABLE = {}
+
+HELP_STRINGS = """
+Hey [{}](tg://user?id={}) your *Miku* is here! 
+I Help Admins To Manage Their Groups! 
+Main commands available :
+ ‣ /help: PM's you this message.
+ ‣ /privacy: to view the privacy policy, and interact with your data.
+ ‣ /help <module name>: PM's you info about that module.
+ ‣ /settings:
+   • in PM: will send you your settings for all supported modules.
+   • in a group: will redirect you to pm, with all that chat's settings.
+For all command use / or !
+"""
+
+for module_name in ALL_MODULES:
+    imported_module = importlib.import_module("MikuXProBot.modules." +
+                                              module_name)
+    if hasattr(imported_module, "__help__") and imported_module.__help__:
+        HELPABLE[imported_module.__mod_name__.lower()] = imported_module
+ 
+@run_async
+def help_button(update, context):
+    query = update.callback_query
+    bot = context.bot
+    mod_match = re.match(r"help_module\((.+?)\)", query.data)
+    prev_match = re.match(r"help_prev\((.+?)\)", query.data)
+    next_match = re.match(r"help_next\((.+?)\)", query.data)
+    back_match = re.match(r"help_back", query.data)
+
+    print(query.message.chat.id)
+
+    try:
+        if mod_match:
+            module = mod_match.group(1)
+            text = ("Here is the help for the *{}* module:\n".format(
+                HELPABLE[module].__mod_name__) + HELPABLE[module].__help__)
+            query.message.edit_caption(
+                text,
+                parse_mode=ParseMode.MARKDOWN,
+                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Back",
+                                       callback_data="help_back"),
+                  InlineKeyboardButton(text="Support",
+                                       url="t.me/Mikuxsupport")]]))
+
+        elif prev_match:
+            curr_page = int(prev_match.group(1))
+            query.message.edit_caption(
+                HELP_STRINGS.format(update.effective_user.first_name, update.effective_user.id),
+                parse_mode=ParseMode.MARKDOWN,
+                reply_markup=InlineKeyboardMarkup(
+                    paginate_modules(curr_page - 1, HELPABLE, "help")))
+
+        elif next_match:
+            next_page = int(next_match.group(1))
+            query.message.edit_caption(
+                HELP_STRINGS.format(update.effective_user.first_name, update.effective_user.id),
+                parse_mode=ParseMode.MARKDOWN,
+                reply_markup=InlineKeyboardMarkup(
+                    paginate_modules(next_page + 1, HELPABLE, "help")))
+
+        elif back_match:
+            query.message.edit_caption(
+                HELP_STRINGS.format(update.effective_user.first_name, update.effective_user.id),
+                parse_mode=ParseMode.MARKDOWN,
+                reply_markup=InlineKeyboardMarkup(
+                    paginate_modules(0, HELPABLE, "help")))
+
+        # ensure no spinny white circle
+        context.bot.answer_callback_query(query.id)
+        # query.message.delete()
+
+    except BadRequest:
+        pass
 
 __help__ = """
 *Admins only:*
@@ -1033,12 +1119,6 @@ __help__ = """
  • `/resetgoodbye`*:* reset to the default goodbye message.
  • `/cleanwelcome <on/off>`*:* On new member, try to delete the previous welcome message to avoid spamming the chat.
  • `/welcomemutehelp`*:* gives information about welcome mutes.
- • `/cleanservice <on/off`*:* deletes telegrams welcome/left service messages. 
- *Example:*
-user joined chat, user left chat.
-
-*Welcome markdown:* 
- • `/welcomehelp`*:* view more formatting information for custom welcome/goodbye messages.
 """
 
 NEW_MEM_HANDLER = MessageHandler(Filters.status_update.new_chat_members,
@@ -1062,6 +1142,8 @@ CLEAN_WELCOME = CommandHandler(
 WELCOME_HELP = CommandHandler("welcomehelp", welcome_help)
 WELCOME_MUTE_HELP = CommandHandler("welcomemutehelp", welcome_mute_help)
 BUTTON_VERIFY_HANDLER = CallbackQueryHandler(user_button, pattern=r"user_join_")
+help_callback_handler = CallbackQueryHandler(
+        help_button, pattern=r"help_.*")
 
 dispatcher.add_handler(NEW_MEM_HANDLER)
 dispatcher.add_handler(LEFT_MEM_HANDLER)
@@ -1072,6 +1154,7 @@ dispatcher.add_handler(SET_GOODBYE)
 dispatcher.add_handler(RESET_WELCOME)
 dispatcher.add_handler(RESET_GOODBYE)
 dispatcher.add_handler(CLEAN_WELCOME)
+dispatcher.add_handler(help_callback_handler)
 dispatcher.add_handler(WELCOME_HELP)
 dispatcher.add_handler(WELCOMEMUTE_HANDLER)
 dispatcher.add_handler(CLEAN_SERVICE_HANDLER)
@@ -1095,4 +1178,5 @@ __handlers__ = [
     CLEAN_SERVICE_HANDLER,
     BUTTON_VERIFY_HANDLER,
     WELCOME_MUTE_HELP,
+    help_callback_handler,
 ]
