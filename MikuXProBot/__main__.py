@@ -6,17 +6,17 @@ import random
 from sys import argv
 from typing import Optional
 
-import MikuXProBot.modules.sql.users_sql as sql
+import ShukurenaiPRobot.modules.sql.users_sql as sql
 
-from MikuXProBot import (ALLOW_EXCL, CERT_PATH, DONATION_LINK, LOGGER,
+from ShukurenaiPRobot import (ALLOW_EXCL, CERT_PATH, DONATION_LINK, LOGGER,
                           OWNER_ID, PORT, SUPPORT_CHAT, TOKEN, URL, WEBHOOK,
                           SUPPORT_CHAT, dispatcher, StartTime, telethn, updater)
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
-from MikuXProBot.modules import ALL_MODULES
-from MikuXProBot.modules.helper_funcs.chat_status import is_user_admin
-from MikuXProBot.modules.helper_funcs.misc import paginate_modules
-from MikuXProBot.script import PM_START_TEXT, MIKU_DISPACHER_PIC, PM_PHOTO, MIKU_N_IMG, TEXXT, MIKU_IMG
+from ShukurenaiPRobot.modules import ALL_MODULES
+from ShukurenaiPRobot.modules.helper_funcs.chat_status import is_user_admin
+from ShukurenaiPRobot.modules.helper_funcs.misc import paginate_modules
+from ShukurenaiPRobot.script import PM_START_TEXT, MIKU_DISPACHER_PIC, PM_PHOTO, MIKU_N_IMG, TEXXT, MIKU_IMG
 from telegram import (InlineKeyboardButton, InlineKeyboardMarkup, ParseMode,
                       Update)
 from telegram.error import (BadRequest, ChatMigrated, NetworkError,
