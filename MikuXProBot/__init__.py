@@ -235,7 +235,7 @@ DEMONS = list(DEMONS)
 TIGERS = list(TIGERS)
 
 # Load at end to ensure all prev variables have been set
-from ShukurenaiPRobot.modules.helper_funcs.handlers import (CustomCommandHandler,
+from MikuXProBot.modules.helper_funcs.handlers import (CustomCommandHandler,
                                                         CustomMessageHandler,
                                                         CustomRegexHandler)
 
