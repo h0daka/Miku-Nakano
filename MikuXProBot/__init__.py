@@ -256,8 +256,8 @@ BOT_USERNAME = bottie.username
 BOT_NAME = bottie.first_name
 BOT_MENTION = bottie.mention
 
-if "@MikuXProBot" not in PM_START_TEXT:
-    LOGGER.critical(f"{OWNER_ID} Is Cheating. Add `Thanks To @MikuXProBot For Repo` In PM_START_TEXT To Fix This")
+if "@ShukurenaiPRobot" not in PM_START_TEXT:
+    LOGGER.critical(f"{OWNER_ID} Is Cheating. Add `Thanks To @ShukurenaiPRobot For Repo` In PM_START_TEXT To Fix This")
     sys.exit(1)
 else:
     LOGGER.info("Your Bot Is Ready")
