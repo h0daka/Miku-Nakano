@@ -592,12 +592,12 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.send_message(f"@SHUKURENAI_SUPPORT", f"[I'm In Online]({MIKU_DISPACHER_PIC})", parse_mode=ParseMode.MARKDOWN,
+            dispatcher.bot.send_message(f"@SHUKURENAI_SUPPORT", f"[I'm ready to battle]({SHU_DISPACHER_PIC})", parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                   [                  
                        InlineKeyboardButton(
-                             text="[► Summon Me◄]",
+                             text="[► Add me◄]",
                              url="https://t.me/ShukurenaiPRobot?startgroup=true")
                      ] 
                 ]
