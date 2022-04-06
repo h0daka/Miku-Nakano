@@ -59,8 +59,6 @@ class Config(object):
     SPAMMERS = None
     
 
-
-
 class Production(Config):
     LOGGER = True
 
