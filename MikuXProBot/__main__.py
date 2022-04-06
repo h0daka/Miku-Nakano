@@ -16,7 +16,7 @@ from MikuXProBot import (ALLOW_EXCL, CERT_PATH, DONATION_LINK, LOGGER,
 from MikuXProBot.modules import ALL_MODULES
 from MikuXProBot.modules.helper_funcs.chat_status import is_user_admin
 from MikuXProBot.modules.helper_funcs.misc import paginate_modules
-from MikuXProBot.script import PM_START_TEXT, MIKU_DISPACHER_PIC, SHU_DISPAVHER_PIC,PM_PHOTO, MIKU_N_IMG, TEXXT, MIKU_IMG
+from MikuXProBot.script import PM_START_TEXT, MIKU_DISPACHER_PIC, SHU_DISPACHER_PIC,PM_PHOTO, MIKU_N_IMG, TEXXT, MIKU_IMG
 from telegram import (InlineKeyboardButton, InlineKeyboardMarkup, ParseMode,
                       Update)
 from telegram.error import (BadRequest, ChatMigrated, NetworkError,
