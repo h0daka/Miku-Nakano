@@ -60,7 +60,10 @@ buttons = [
                         InlineKeyboardButton(
                              text="🗞️ Repo",
                              url="https://github.com/Sivatheboss88/ShukurenaiPRobot"),
-                    ],
+                        InlineKeyboardButton(
+                             text="vist cartoon channel",
+                             url="https://t.me/pdiskshortenlinks",
+                ],
                    [                  
                        InlineKeyboardButton(
                              text="🔐 Help",
