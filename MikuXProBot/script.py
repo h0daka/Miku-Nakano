@@ -9,6 +9,7 @@ MIKU_IMG = (
       "https://telegra.ph//file/e8caba1ebf38cd9ff1e58.jpg",
       "https://telegra.ph//file/10c8da788e3df7885ee52.jpg",
       "https://telegra.ph//file/d380a6f3ba697c8d3faae.jpg",
+      "https://telegra.ph//file/9425733f908fc89fb8828.jpg",
 )
 
 TEXXT = "<b>Heya</b> {} <b>Do you Like me?</b>"
@@ -18,8 +19,8 @@ MIKU_N_IMG = (
       "https://telegra.ph//file/b716bc386c81048ff681f.jpg",
       "https://telegra.ph//file/e8caba1ebf38cd9ff1e58.jpg",
       "https://telegra.ph//file/10c8da788e3df7885ee52.jpg",
-      "https://telegra.ph//file/d380a6f3ba697c8d3faae.jpg"
-
+      "https://telegra.ph//file/d380a6f3ba697c8d3faae.jpg",
+      "https://telegra.ph//file/9425733f908fc89fb8828.jpg"
 )
 
 PM_PHOTO = "https://telegra.ph/file/22ac71072f47479be9987.jpg"
