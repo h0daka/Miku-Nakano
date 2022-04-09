@@ -16,6 +16,7 @@ from MikuXProBot.modules import ALL_MODULES
 from MikuXProBot.modules.helper_funcs.chat_status import is_user_admin
 from MikuXProBot.modules.helper_funcs.misc import paginate_modules
 from MikuXProBot.script import PM_START_TEXT, MIKU_DISPACHER_PIC, SHU_DISPACHER_PIC,PM_PHOTO, MIKU_N_IMG, TEXXT, MIKU_IMG
+from MikuXProBot.modules.sql.night_mode_sql as sql
 from telegram import (InlineKeyboardButton, InlineKeyboardMarkup, ParseMode,
                       Update)
 from telegram.error import (BadRequest, ChatMigrated, NetworkError,
@@ -24,7 +25,6 @@ from telegram.ext import (CallbackContext, CallbackQueryHandler, CommandHandler,
                           Filters, MessageHandler)
 from telegram.ext.dispatcher import DispatcherHandlerStop, run_async
 from telegram.utils.helpers import escape_markdown, mention_html
-
 def get_readable_time(seconds: int) -> str:
     count = 0
     ping_time = ""
