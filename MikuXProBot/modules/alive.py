@@ -1,7 +1,7 @@
 import asyncio
 import telegram
 import os
-import requests
+import requests 
 import datetime
 import time
 from PIL import Image
@@ -59,7 +59,7 @@ async def hmm(yes):
     Miku += f"♡ **My Master** ~♪ [https://t.me/Sivatheboss](tg://user?id={OWNER_ID})\n\n"
     Miku += f"Thanks For Adding Me In {yes.chat.title}"
     BUTTON = [[Button.url("Support Chat", "https://t.me/SHUKURENAI_SUPPORT"), Button.url("Updates Channel", "https://t.me/SHUKURENAI_UPDATES")]]
-    on = await borg.send_file(yes.chat_id, file=file2,caption=SHU, buttons=BUTTON)
+    on = await borg.send_file(yes.chat_id, file=file2,caption=Miku, buttons=BUTTON)
 
     await asyncio.sleep(edit_time)
     ok = await borg.edit_message(yes.chat_id, on, file=file3, buttons=BUTTON) 
@@ -85,5 +85,5 @@ async def hmm(yes):
 @register(pattern=("/repo"))
 async def repo(event):
     Miku = f"**Hey [{event.sender.first_name}](tg://user?id={event.sender.id}), Click The Button Below To Get My Repo**\n\n"
-    BUTTON = [[Button.url("[► Support ◄]", "https://t.me/MikusSupport"), Button.url("[► Repo ◄]", "https://github.com/h0daka/Miku-Nakano")]]
+    BUTTON = [[Button.url("[► Support ◄]", "https://t.me/SHUKURENAI_SUPPORT"), Button.url("[► Repo ◄]", "https://github.com/Sivatheboss88/ShukurenaiPRobot")]]
     await borg.send_file(event.chat_id, file="https://telegra.ph/file/c5b6c0a3a6832efc08e5b.jpg", caption=Miku, buttons=BUTTON)
