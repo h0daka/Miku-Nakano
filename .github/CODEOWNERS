@@ -2,8 +2,8 @@
 # Default owners for everything in the repo, unless a later match takes precedence
 
 # Miku owns the files under blacklist thingies
-/MikuXProBot/modules/blacklistusers.py @Sivatheboss
-/MikuXProBot/modules/sql/blacklistusers_sql.py @Sivatheboss
+/MikuXProBot/modules/blacklistusers.py @Sivatheboss{http://t.me/Sivatheboss}
+/MikuXProBot/modules/sql/blacklistusers_sql.py @Sivatheboss{http://t.me/Sivatheboss}
 #pep8-ing the code doesn't change maker
-/MikuXProBot/modules/paste.py @Sivatheboss
-/MikuXProBot/modules/speed_test.py @Sivatheboss
+/MikuXProBot/modules/paste.py @Sivatheboss{http://t.me/Sivatheboss}
+/MikuXProBot/modules/speed_test.py @Sivatheboss{http://t.me/Sivatheboss}
