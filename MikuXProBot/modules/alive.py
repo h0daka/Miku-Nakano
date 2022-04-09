@@ -16,7 +16,7 @@ from telethon.tl.types import ChannelParticipantsAdmins
 from pyrogram import __version__ as pyro
 
 
-edit_time = 7
+edit_time = 6
 """ =======================CONSTANTS====================== """
 file1 = "https://telegra.ph//file/b716bc386c81048ff681f.jpg"
 file2 = "https://telegra.ph//file/e8caba1ebf38cd9ff1e58.jpg"
