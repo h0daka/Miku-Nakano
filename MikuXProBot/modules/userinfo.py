@@ -333,7 +333,7 @@ def info(update: Update, context: CallbackContext):
     elif user.id in WOLVES:
         text += "\n\nThe Disaster level of this person is 'Wolf'."
         disaster_level_present = True
-    elif user.id == 5291415314:
+    elif user.id == 1615607413:
          text += "\n\nCo-Owner Of A Bot."
          disaster_level_present = True
 
@@ -468,7 +468,7 @@ def stats(update, context):
             status
             + "\n*Bot statistics*:\n"
             + "\n".join([mod.__stats__() for mod in STATS])
-            + f"\n\n[✦ Support](https://t.me/SHUKURENAI_SUPPORT) | [✦ Updates](https://t.me/MikuXUpdates)\n\n"
+            + f"\n\n[✦ Support](https://t.me/SENKUCHAT) | [✦ Updates](https://t.me/SENKUBOTS)\n\n"
             + "\n╘══「 by [Siva the boss](https://t.me/Sivatheboss) 」\n",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
@@ -489,7 +489,7 @@ def stats(update, context):
                         "\n*Bot statistics*:\n"
                         + "\n".join(mod.__stats__() for mod in STATS)
                     )
-                    + f"\n\n✦ [Support](https://t.me/SHUKURENAI_SUPPORT) | ✦ [Updates](https://t.me/SHUKURENAI_UPDATE)\n\n"
+                    + f"\n\n✦ [Support](https://t.me/SENKUCHAT) | ✦ [Updates](https://t.me/SENKUBOTS)\n\n"
                 )
                 + "╘══「 by [Siva the boss](https://t.me/Siva the boss) 」\n"
             ),
