@@ -151,7 +151,7 @@ async def job_close():
                     for pro in chats:
                             try:
                                         await telethn.send_message(
-                                                      int(pro.chat_id), "12:00 Am, Group Is Closing Till 6 Am. Night Mode Started ! \n**Powered By #ShukurenaiPRobot**"
+                                                      int(pro.chat_id), "12:00 Am, Group Is Closing Till 6 Am. Night Mode Started ! \n**Powered By @ShukurenaiPRobot**"
                                                                   )
                                                                               await telethn(
                                                                                           functions.messages.EditChatDefaultBannedRightsRequest(
