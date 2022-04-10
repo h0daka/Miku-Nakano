@@ -5,7 +5,7 @@ import random
 from sys import argv
 from typing import Optional
 
-import MikuXProBot.modules.sql.users_sql as sql
+
 
 from MikuXProBot import (ALLOW_EXCL, CERT_PATH, DONATION_LINK, LOGGER,
                           OWNER_ID, PORT, SUPPORT_CHAT, TOKEN, URL, WEBHOOK,
