@@ -28,7 +28,7 @@ async def feedback(e):
     user_id = e.sender.id
     user_name = e.sender.first_name
     mention = "[" + user_name + "](tg://user?id=" + str(user_id) + ")"
-    BUTTON = [[Button.url("Go To Support Group", f"https://t.me/SENKUCHAT")]]
+    BUTTON = [[Button.url("Go To Support Group", f"https://t.me/SHUKURENAI_SUPPORT")]]
     TEXT = "Thanks For Your Feedback, I Hope You Happy With Our Service"
     GIVE = "Give Some Text For Feedback ✨"
     logger_text = f"""
