@@ -468,7 +468,7 @@ def stats(update, context):
             status
             + "\n*Bot statistics*:\n"
             + "\n".join([mod.__stats__() for mod in STATS])
-            + f"\n\n[✦ Support](https://t.me/SENKUCHAT) | [✦ Updates](https://t.me/SENKUBOTS)\n\n"
+            + f"\n\n[✦ Support](https://t.me/SHUKURENAI_SUPPORT) | [✦ Updates](https://t.me/SHUKURENAI_UPDATES)\n\n"
             + "\n╘══「 by [Siva the boss](https://t.me/Sivatheboss) 」\n",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
@@ -491,7 +491,7 @@ def stats(update, context):
                     )
                     + f"\n\n✦ [Support](https://t.me/SENKUCHAT) | ✦ [Updates](https://t.me/SENKUBOTS)\n\n"
                 )
-                + "╘══「 by [Siva the boss](https://t.me/Siva the boss) 」\n"
+                + "╘══「 by [Siva the boss](https://t.me/Sivatheboss) 」\n"
             ),
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
