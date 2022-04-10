@@ -1,3 +1,4 @@
+
 import importlib
 import time
 import re
@@ -5,7 +6,7 @@ import random
 from sys import argv
 from typing import Optional
 
-
+import MikuXProBot.modules.sql.users_sql as sql
 
 from MikuXProBot import (ALLOW_EXCL, CERT_PATH, DONATION_LINK, LOGGER,
                           OWNER_ID, PORT, SUPPORT_CHAT, TOKEN, URL, WEBHOOK,
@@ -15,7 +16,7 @@ from MikuXProBot import (ALLOW_EXCL, CERT_PATH, DONATION_LINK, LOGGER,
 from MikuXProBot.modules import ALL_MODULES
 from MikuXProBot.modules.helper_funcs.chat_status import is_user_admin
 from MikuXProBot.modules.helper_funcs.misc import paginate_modules
-from MikuXProBot.script import PM_START_TEXT, MIKU_DISPACHER_PIC, SHU_DISPACHER_PIC,PM_PHOTO, MIKU_N_IMG, TEXXT, MIKU_IMG
+from MikuXProBot.script import PM_START_TEXT, MIKU_DISPACHER_PIC, PM_PHOTO, MIKU_N_IMG, TEXXT, MIKU_IMG
 from telegram import (InlineKeyboardButton, InlineKeyboardMarkup, ParseMode,
                       Update)
 from telegram.error import (BadRequest, ChatMigrated, NetworkError,
@@ -24,6 +25,7 @@ from telegram.ext import (CallbackContext, CallbackQueryHandler, CommandHandler,
                           Filters, MessageHandler)
 from telegram.ext.dispatcher import DispatcherHandlerStop, run_async
 from telegram.utils.helpers import escape_markdown, mention_html
+
 def get_readable_time(seconds: int) -> str:
     count = 0
     ping_time = ""
@@ -54,19 +56,19 @@ def get_readable_time(seconds: int) -> str:
 buttons = [
     [
                         InlineKeyboardButton(
-                             text="🏹 Summon Me",
+                             text="💗 Summon Me",
                              url="https://t.me/ShukurenaiPRobot?startgroup=true"),
                         InlineKeyboardButton(
-                             text="🗞️ Repo",
-                             url="https://github.com/Sivatheboss88/ShukurenaiPRobot"),
+                             text="💖 UPDATES",
+                             url="https://t.me/SENKUBOTS"),
                     ],
                    [                  
                        InlineKeyboardButton(
                              text="🔐 Help",
                              callback_data="help_back"),
                         InlineKeyboardButton(
-                             text=" 💫 About Me",
-                             callback_data="miku_"),
+                             text="💕 support",
+                             url="https://t.me/SENKUCHAT"),
                     ], 
     ]
 
@@ -79,7 +81,7 @@ HELP_STRINGS = """
  • /settings:
    • in PM: will send you your settings for all supported modules.
    • in a group: will redirect you to pm, with all that chat's settings.
-For all command use /* [or](http://telegra.ph/file/e00c4150c35f27521a32d.jpg) *!*
+For all command use /* [or](https://telegra.ph//file/fa0967c1ba392c2418b85.jpg) *!*
 """.format(
     dispatcher.bot.first_name,""
     if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\nKindly use ! for commands if / is not working\n")
@@ -320,14 +322,14 @@ def miku_callback_data(update, context):
                  \n❍ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc.
                  \n❍ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
                  \n❍ I check for admins' permissions before executing any command and more stuffs
-                 \n❍ shu kerenia licensed under the GNU General Public License v3.0
-                 \n❍ If you have any question about SHU, let us know at [SHU KURENAI Support](t.me/{SHUKURENAI_SUPPORT}).""",
+                 \n❍ shu licensed under the GNU General Public License v3.0
+                 \n❍ If you have any question about Miku, let us know at [shu kerenia Support](t.me/{SUPPORT_CHAT}).""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="🌏 My Master", url="t.me/Sivatheboss"),
+                    InlineKeyboardButton(text="🌏 My Master", url="t.me/sivatheboss"),
                     InlineKeyboardButton(text="✨ Try Inline", switch_inline_query_current_chat="",),
                  ],
                  [
@@ -546,7 +548,7 @@ def donate(update: Update, context: CallbackContext):
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True)
 
-        if OWNER_ID != 5291415314 and DONATION_LINK:
+        if OWNER_ID != 5077976227 and DONATION_LINK:
             update.effective_message.reply_text(
                 "You can also donate to the person currently running me "
                 "[here]({})".format(DONATION_LINK),
@@ -590,12 +592,12 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.send_message(f"@SENKUCHAT", f"[I'm Ready To Battle]({SHU_DISPACHER_PIC})", parse_mode=ParseMode.MARKDOWN,
+            dispatcher.bot.send_message(f"@{SUPPORT_CHAT}", f"[I'm In Online]({MIKU_DISPACHER_PIC})", parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                   [                  
                        InlineKeyboardButton(
-                             text="[► Add me◄]",
+                             text="[► Summon Me◄]",
                              url="https://t.me/ShukurenaiPRobot?startgroup=true")
                      ] 
                 ]
@@ -646,7 +648,7 @@ def main():
             updater.bot.set_webhook(url=URL + TOKEN)
 
     else:
-        LOGGER.info("Finally shu kerenia Is In Online")
+        LOGGER.info("Finally Miku Is In Online")
         updater.start_polling(timeout=15, read_latency=4, drop_pending_updates=True, allowed_updates=Update.ALL_TYPES)
 
     if len(argv) not in (1, 3, 4):
