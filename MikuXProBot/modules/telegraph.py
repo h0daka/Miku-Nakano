@@ -39,7 +39,7 @@ async def _(event):
                 os.remove(downloaded_file_name)
             else:
                 end = datetime.now()
-                BUTTON = [[InlineKeyboardButton.url("Telegraph", f"https://telegra.ph/{media_urls[0]}")]]
+                BUTTON = [[Button.url("Telegraph", f"https://telegra.ph/{media_urls[0]}")]]
                 ms_two = (end - start).seconds
                 os.remove(downloaded_file_name)
                 await h.delete()
