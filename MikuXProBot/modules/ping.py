@@ -29,7 +29,7 @@ sites_list = {
     "Jikan": "https://api.jikan.moe/v3"
 }
 
-PING_IMG = "https://telegra.ph/file/10e3ccea979228979cde6.jpg"
+PING_IMG = "https://telegra.ph//file/20eb1b93fa54558dc3167.jpg"
 
 def get_readable_time(seconds: int) -> str:
     count = 0
@@ -147,7 +147,7 @@ dispatcher.add_handler(PINGALL_HANDLER)
 
 
 __help__ = """
-/ping: Miku pong
+/ping: Shu kurenai ping pong
 """
 
 __mod_name__ = "ping⚡"
