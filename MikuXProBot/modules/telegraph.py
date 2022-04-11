@@ -6,7 +6,7 @@ import os
 from PIL import Image
 from datetime import datetime
 from telegraph import Telegraph, upload_file, exceptions
-shu = "SHU"
+miku = "SHU"
 telegraph = Telegraph()
 r = telegraph.create_account(short_name=miku)
 auth_url = r["auth_url"]
@@ -39,7 +39,7 @@ async def _(event):
                 os.remove(downloaded_file_name)
             else:
                 end = datetime.now()
-                BUTTON = [[Button.url("Telegraph", f"https://telegra.ph/{media_urls[0]}")]]
+                BUTTON = [[InlineKeyBoard.url("Telegraph", f"https://telegra.ph/{media_urls[0]}")]]
                 ms_two = (end - start).seconds
                 os.remove(downloaded_file_name)
                 await h.delete()
