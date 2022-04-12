@@ -55,7 +55,7 @@ def get_readable_time(seconds: int) -> str:
 buttons = [
     [
                         InlineKeyboardButton(
-                             text="🏹 Summon Me",
+                             text="🏹 ᴀᴅᴅ ᴍᴇ ",
                              url="https://t.me/ShukurenaiPRobot?startgroup=true"),
                         InlineKeyboardButton(
                              text="🗞️ Repo",
@@ -85,7 +85,7 @@ For all command use /* [or](http://telegra.ph/file/e00c4150c35f27521a32d.jpg) *!
     dispatcher.bot.first_name,""
     if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\nKindly use ! for commands if / is not working\n")
 
-DONATE_STRING = """ Adding Me To Your Groups Is Donation For Me """
+DONATE_STRING = """ ᴍʏ ᴍᴀsᴛᴇʀ ᴄᴏɴᴛᴀᴄᴛ ᴍᴇ @Sivatheboss"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -212,10 +212,10 @@ def start(update: Update, context: CallbackContext):
                 [
                   [                  
                        InlineKeyboardButton(
-                             text="🚑 Support",
+                             text="🚑 sᴜᴘᴘᴏʀᴛ",
                              url=f"https://t.me/SHUKURENAI_SUPPORT"),
                        InlineKeyboardButton(
-                             text="🛰️ Updates",
+                             text="🛰️ ᴜᴘᴅᴀᴛᴇs",
                              url="https://t.me/SHUKURENAI_UPDATES")
                      ] 
                 ]
@@ -322,7 +322,7 @@ def miku_callback_data(update, context):
                  \n❍ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
                  \n❍ I check for admins' permissions before executing any command and more stuffs
                  \n❍ Miku licensed under the GNU General Public License v3.0
-                 \n❍ If you have any question about SHU, let us know at [SHU KURENAI Support](t.me/{SHUKURENAI_SUPPORT}).""",
+                 \n❍ If you have any question about SHU, let us know at [SHU KURENAI](t.me/{SHUKURENAI_SUPPORT}).""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -591,12 +591,12 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.send_message(f"@SHUKURENAI_SUPPORT", f"[I'm Ready To Battle]({SHU_DISPACHER_PIC})", parse_mode=ParseMode.MARKDOWN,
+            dispatcher.bot.send_message(f"@SHUKURENAI_SUPPORT", f"[ℑ' 𝔞𝔪 𝔯𝔢𝔞𝔡𝔶 𝔱𝔬 𝔅𝔞𝔱𝔱𝔩𝔢]({SHU_DISPACHER_PIC})", parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                   [                  
                        InlineKeyboardButton(
-                             text="[► Add me◄]",
+                             text="[► ᴀᴅᴅ ᴍᴇ◄]",
                              url="https://t.me/ShukurenaiPRobot?startgroup=true")
                      ] 
                 ]
