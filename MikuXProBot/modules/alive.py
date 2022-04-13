@@ -1,7 +1,7 @@
 import asyncio
 import telegram
 import os
-import requests
+import requests 
 import datetime
 import time
 from PIL import Image
@@ -16,12 +16,14 @@ from telethon.tl.types import ChannelParticipantsAdmins
 from pyrogram import __version__ as pyro
 
 
-edit_time = 5
+edit_time = 6
 """ =======================CONSTANTS====================== """
-file1 = "https://telegra.ph/file/f1e9b94decb547cb45cab.jpg"
-file2 = "https://telegra.ph/file/c5b6c0a3a6832efc08e5b.jpg"
-file3 = "https://telegra.ph/file/1dbcdedfc78d0318a288b.jpg"
-file4 = "https://telegra.ph/file/ac522b519f77a1054e9e9.jpg"
+file1 = "https://telegra.ph//file/b716bc386c81048ff681f.jpg"
+file2 = "https://telegra.ph//file/e8caba1ebf38cd9ff1e58.jpg"
+file3 = "https://telegra.ph//file/10c8da788e3df7885ee52.jpg"
+file4 = "https://telegra.ph//file/d380a6f3ba697c8d3faae.jpg"
+file5 = "https://telegra.ph//file/e5e6db7bbab09e8f726a2.jpg"
+file6 ="https://telegra.ph//file/1171b0b4d577930ca5c44.jpg"
 """ =======================CONSTANTS====================== """
 
 START_TIME = datetime.utcnow()
@@ -56,9 +58,9 @@ async def hmm(yes):
     Miku += f"♡ **Telethon Version** ~♪ `{version.__version__}`\n\n"
     Miku += f"♡ **Python Telegram Bot Version** ~♪ `{telegram.__version__}`\n\n"
     Miku += f"♡ **Pyrogram Version** ~♪ `{pyro}`\n\n"
-    Miku += f"♡ **My Master** ~♪ [{OWNER_NAME}](tg://user?id={OWNER_ID})\n\n"
+    Miku += f"♡ **My Master** ~♪ [[{OWNER_NAME}]({OWNER_ID})\n\n](tg://user?id={OWNER_ID})\n\n"
     Miku += f"Thanks For Adding Me In {yes.chat.title}"
-    BUTTON = [[Button.url("Support Chat", "https://t.me/MikusSupport"), Button.url("Updates Channel", "https://t.me/Pegasusupdates")]]
+    BUTTON = [[Button.url("Support Chat", "https://t.me/SHUKURENAI_SUPPORT"), Button.url("Updates Channel", "https://t.me/SHUKURENAI_UPDATES")]]
     on = await borg.send_file(yes.chat_id, file=file2,caption=Miku, buttons=BUTTON)
 
     await asyncio.sleep(edit_time)
@@ -85,5 +87,5 @@ async def hmm(yes):
 @register(pattern=("/repo"))
 async def repo(event):
     Miku = f"**Hey [{event.sender.first_name}](tg://user?id={event.sender.id}), Click The Button Below To Get My Repo**\n\n"
-    BUTTON = [[Button.url("[► Support ◄]", "https://t.me/MikusSupport"), Button.url("[► Repo ◄]", "https://github.com/h0daka/Miku-Nakano")]]
-    await borg.send_file(event.chat_id, file="https://telegra.ph/file/c5b6c0a3a6832efc08e5b.jpg", caption=Miku, buttons=BUTTON)
+    BUTTON = [[Button.url("[► Support ◄]", "https://t.me/SHUKURENAI_SUPPORY"), Button.url("[► Repo ◄]", "https://github.com/Sivatheboss88/ShukurenaiPRobot")]]
+    await borg.send_file(event.chat_id, file="https://telegra.ph//file/e5e6db7bbab09e8f726a2.jpg", caption=Miku, buttons=BUTTON)

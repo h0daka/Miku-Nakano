@@ -1,7 +1,7 @@
 {
-      "name": "Miku Nakano",
+      "name": "Shu kurenai",
       "description": "An Anime themed Telegram group management bot.",
-      "logo": "https://telegra.ph/file/bc219808c6d888fc72260.jpg",
+      "logo": "http://telegra.ph/file/e00c4150c35f27521a32d.jpg",
       "keywords": [
          "telegram",
          "anime",
@@ -9,7 +9,7 @@
          "manager",
          "Miku"
       ],   
-   "repository": "https://github.com/h0daka/Miku-Nakano",
+   "repository": "https://github.com/Sivatheboss88/ShukurenaiPRobot",
    "addons": [
       {
          "options": {
@@ -42,16 +42,16 @@
       "OWNER_ID": {
          "description": "Your user ID as an integer.",
          "required": true,
-         "value": "5291415314"
+         "value": "5077976227"
       },
       "OWNER_USERNAME": {
          "description": "Your username without the @",
-         "value": "h0daka"
+         "value": "Sivatheboss"
       },
       "SUPPORT_CHAT": {
          "description": "Your Telegram support group chat username where your users will go and bother you with shit But be like: MyGroupChatUsernameBlah. If this ever points to miku support than consider you made an enemy.",
          "required": true,
-         "value": "Mikussupport"
+         "value": "SHUKURENAI_SUPPORT"
       },
       "EVENT_LOGS": {
          "description": "Event logs channel to note down important bot level events, recommend to make this public. ex: '-123456'",
@@ -66,7 +66,7 @@
       "ARQ_API_KEY": {
          "description": "For Some Modules. Get it from @ArqRobot",
          "required": true,
-         "value": ""
+         "value": "LVLHDQ-WDZBUE-IYEJVG-FOYUSJ-ARQ"
       },
       "ARQ_API_URL": {
          "description": "Uses For Arq Modules. Don't Change Anything Just Leave It.",
@@ -86,7 +86,7 @@
       "DEV_USERS": {
          "description": "ID of users who are Devs of your bot (can use /py etc.). If you are a noob and would come and bother Miku support then keep the current ID's here at they are and add yours.",
          "required": false,
-         "value": "5291415314"
+         "value": "5077976227"
       },
       "sw_api": {
          "description": "Spamwatch API Token, Get one from @SpamWatchBot.",
@@ -100,22 +100,22 @@
       "DRAGONS": {
          "description": "A space separated list of user IDs who you want to assign as sudo users.",
          "required": false,
-         "value": "5291415314"
+         "value": "5077976227"
       },
       "DEMONS": {
          "description": "A space separated list of user IDs who you wanna assign as support users(gban perms only).",
          "required": false,
-         "value": "5291415314"
+         "value": "5077976227"
       },
       "TIGERS": {
          "description": "A space separated list of user IDs who you wanna assign as tiger users.",
          "required": false,
-         "value": ""
+         "value": "5077976227"
       },
       "WOLVES": {
          "description": "A space separated list of user IDs who you want to assign as whitelisted - can't be banned with your bot.",
          "required": false,
-         "value": ""
+         "value": "5077976227"
       },
       "ENV": {
          "description": "Setting this to ANYTHING will enable environment variables. Leave it as it is",

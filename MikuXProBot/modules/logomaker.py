@@ -19,7 +19,8 @@ from MikuXProBot import telethn
 from PIL import Image, ImageDraw, ImageFont
 
 
-LOGO_LINKS            = ["https://telegra.ph/file/d1838efdafce9fe611d0c.jpg",
+LOGO_LINKS            = ["https://telegra.ph//file/9c7a05b7f199aa2a28e0a.jpg",
+                         "https://telegra.ph/file/d1838efdafce9fe611d0c.jpg",
                          "https://telegra.ph/file/c1ff2d5ec5e1b5bd1b200.jpg",
                          "https://telegra.ph/file/08c5fbe14cc4b13d1de05.jpg",
                          "https://telegra.ph/file/66614a049d74fe2a220dc.jpg",

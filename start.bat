@@ -1,4 +1,4 @@
 @echo off
-TITLE MikuXProBot
+TITLE ShukurenaiPRobot
 :: Enables virtual env mode and then starts Miku
-env\scripts\activate.bat && py -m MikuXProBot
+env\scripts\activate.bat && py -m ShukurenaiPRobot
