@@ -17,13 +17,6 @@ from MikuXProBot.script import PM_START_TEXT
 
 StartTime = time.time()
 
-# enable logging
-logging.basicConfig(
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    handlers=[logging.FileHandler('log.txt'),
-              logging.StreamHandler()],
-    level=logging.INFO)
-
 
 log = logging.getLogger('[Your Bot Is Building]')
 
