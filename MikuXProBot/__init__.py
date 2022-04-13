@@ -24,9 +24,7 @@ logging.basicConfig(
               logging.StreamHandler()],
     level=logging.INFO)
 
-LOGGER = logging.getLogger("[ShukurenaiPRobot]")
-        #or
-LOGGER = logging.getLogger("[MikuXProbot]")
+LOGGER = logging.getLogger("[ShukurenaiPRobot,MikuXProbot]")
 
 log = logging.getLogger('[Your Bot Is Building]')
 
