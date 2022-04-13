@@ -8,7 +8,7 @@ from telegram import (InlineKeyboardButton, InlineKeyboardMarkup, ParseMode,
 from telegram.ext import CallbackContext
 from telegram.utils.helpers import mention_html
 
-from MikuXProbot import (
+from ShukurenaiPRobot import (
     DEV_USERS,
     OWNER_ID,
     DRAGONS,
@@ -18,7 +18,7 @@ from MikuXProbot import (
     WOLVES,
     dispatcher,
 )
-from MikuXProbot.modules.helper_funcs.chat_status import (
+from ShukurenaiPRobot.modules.helper_funcs.chat_status import (
     dev_plus,
     sudo_plus,
     whitelist_plus,
