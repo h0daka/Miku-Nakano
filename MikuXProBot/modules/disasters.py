@@ -18,16 +18,16 @@ from MikuXProbot import (
     WOLVES,
     dispatcher,
 )
-from MikuXProbot.modules.helper_funcs.chat_status import (
+from MikuXPrbot.modules.helper_funcs.chat_status import (
     dev_plus,
     sudo_plus,
     whitelist_plus,
 )
-from ShukurenaiPRobot.modules.helper_funcs.extraction import extract_user
-from ShukurenaiPRobot.modules.log_channel import gloggable
-import ShukurenaiPRobot.modules.sql.nation_sql as sql
+from MikuXProbot.modules.helper_funcs.extraction import extract_user
+from MikuXProbot.modules.log_channel import gloggable
+import MikuXProbot.modules.sql.nation_sql as sql
 from telegram.ext.dispatcher import run_async
-from ShukurenaiPRobot.modules.helper_funcs.decorators import mikucmd
+from MikuXProbot.modules.helper_funcs.decorators import mikucmd
 
 def check_user_id(user_id: int, context: CallbackContext) -> Optional[str]:
     bot = context.bot
