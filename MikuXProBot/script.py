@@ -8,7 +8,7 @@ MIKU_IMG = (
       "https://telegra.ph//file/d950844dad2e473950470.jpg",
 )
 
-TEXXT = "<b>Heya</b> {} <b>Do you Like me?</b>"
+TEXXT = "<b>Yea</b> {} <b>I'm here for you, haven't slept since {}.</b>"
 
 MIKU_N_IMG = (
       "https://telegra.ph/file/837c61d9c51236fea4100.jpg",
