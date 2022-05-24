@@ -207,14 +207,14 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_photo(
-                random.choice(MIKU_IMG), TEXXT.format(mention_html(update.effective_user.id, update.effective_user.first_name)),
+                random.choice(MIKU_IMG), TEXXT.format(mention_html(update.effective_user.id, update.effective_user.first_name), uptime),
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
                   [                  
                        InlineKeyboardButton(
                              text="🚑 Support",
-                             url=f"https://t.me/MikusSupport"),
+                             url=f"https://t.me/MikuXsupport"),
                        InlineKeyboardButton(
                              text="🛰️ Updates",
                              url="https://t.me/MikuXUpdates")
