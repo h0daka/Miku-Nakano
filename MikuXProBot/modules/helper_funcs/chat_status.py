@@ -182,7 +182,7 @@ def stats_plus(func):
                 "Miku stats is just for Dev User",
             )
 
-    return is_sudo_plus_func
+    return is_stats_plus_func
 
 
 def support_plus(func):
