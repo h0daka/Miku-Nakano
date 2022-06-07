@@ -220,6 +220,23 @@ pgram = Client(session_name, api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 print("Scanning AIO http session")
 aiohttpsession = ClientSession() 
 
+REDIS = StrictRedis.from_url(REDIS_URL, decode_responses=True)
+
+try:
+
+    REDIS.ping()
+
+    LOGGER.info("[MIKU]: Connecting To Redis Database")
+
+except BaseException:
+
+    raise Exception("[ERROR]: Your Redis Database Is Not Alive, Please Check Again.")
+
+finally:
+
+   REDIS.ping()
+
+
 #install arq
 print("Connecting ARQ Client")
 arq = ARQ(ARQ_API_URL, ARQ_API_KEY, aiohttpsession)
@@ -255,9 +272,3 @@ BOT_ID = bottie.id
 BOT_USERNAME = bottie.username
 BOT_NAME = bottie.first_name
 BOT_MENTION = bottie.mention
-
-if "@MikuXProBot" not in PM_START_TEXT:
-    LOGGER.critical(f"{OWNER_ID} Is Cheating. Add `Thanks To @MikuXProBot For Repo` In PM_START_TEXT To Fix This")
-    sys.exit(1)
-else:
-    LOGGER.info("Your Bot Is Ready")
