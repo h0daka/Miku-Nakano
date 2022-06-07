@@ -86,13 +86,6 @@ def inlinequery(update: Update, _) -> None:
             "thumb_urL": "https://telegra.ph/file/561a53ed2800f4dccbe30.jpg",
             "keyboard": ".anilist ",
         },
-        {
-            "title": "Paste",
-            "description": "Paste <text> on pastebin.",
-            "message_text": "Click the button below to Paste on pastebin.",
-            "thumb_urL": "https://telegra.ph/file/561a53ed2800f4dccbe30.jpg",
-            "keyboard": ".paste ",
-        },
     ]
 
     inline_funcs = {
@@ -101,7 +94,6 @@ def inlinequery(update: Update, _) -> None:
         ".about": about,
         ".anilist": media_query,
         ".help": help,
-        ".paste": paste_func,
     }
 
     if (f := query.split(" ", 1)[0]) in inline_funcs:
@@ -539,40 +531,3 @@ def help(query: str, update: Update, context: CallbackContext) -> None:
 async def stats_callbacc(_, CallbackQuery):
     text = await bss()
     await pgram.answer_callback_query(CallbackQuery.id, text, show_alert=True)
-
-def _netcat(host, port, update: Update, context: CallbackContext):
-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    s.connect((host, int(port)))
-    content = update.inline_query.query.split(" ", 1)[1]
-    s.sendall(content.encode())
-    s.shutdown(socket.SHUT_WR)
-    while True:
-        data = s.recv(4096).decode("utf-8").strip("\n\x00")
-        if not data:
-            break
-        return data
-    s.close()
-
-def paste(update: Update, context: CallbackContext):
-    link = _netcat("ezup.dev", 9999,  update.inline_query.query.split(" ", 1)[1])
-    return link
-
-def paste_func(query: str, update: Update, context: CallbackContext) -> None:
-    """Handle the inline query."""
-    tex = update.inline_query.query
-    text = tex.split(" ", 1)[1]
-    start_time = time()
-    url = paste(text)
-    msg = f"__**{url}**__"
-    end_time = time()
-    results: List = []
-
-    results.append(
-        InlineQueryResultArticle(
-            id=str(uuid4()),
-            title=f"Pasted In {round(end_time - start_time)} Seconds.",
-            description=url,
-            input_message_content=InputTextMessageContent(msg),
-        )
-    )
-    update.inline_query.answer(results)
