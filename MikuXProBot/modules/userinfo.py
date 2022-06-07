@@ -333,7 +333,7 @@ def info(update: Update, context: CallbackContext):
     elif user.id in WOLVES:
         text += "\n\nThe Disaster level of this person is 'Wolf'."
         disaster_level_present = True
-    elif user.id == 5291415314:
+    elif user.id == 5145883564:
          text += "\n\nCo-Owner Of A Bot."
          disaster_level_present = True
 
