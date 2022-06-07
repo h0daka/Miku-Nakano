@@ -10,13 +10,13 @@ from telegram import MessageEntity, ParseMode
 from telegram.error import BadRequest
 from telegram.ext import Filters, MessageHandler, run_async
 
-from KURUMIBOT import dispatcher
-from KURUMIBOT.modules.disable import DisableAbleCommandHandler, DisableAbleMessageHandler
-from KURUMIBOT.modules.users import get_user_id
+from MikuXProBot import dispatcher
+from MikuXProBot.modules.disable import DisableAbleCommandHandler, DisableAbleMessageHandler
+from MikuXProBot.modules.users import get_user_id
 
-from KURUMIBOT.modules.helper_funcs.alternate import send_message
-from KURUMIBOT.modules.helper_funcs.readable_time import get_readable_time
-from KURUMIBOT import REDIS
+from MikuXProBot.modules.helper_funcs.alternate import send_message
+from MikuXProBot.modules.helper_funcs.readable_time import get_readable_time
+from MikuXProBot import REDIS
 
 # AFK
 def is_user_afk(userid):
