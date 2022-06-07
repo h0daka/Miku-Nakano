@@ -161,29 +161,6 @@ def sudo_plus(func):
 
     return is_sudo_plus_func
 
-def stats_plus(func):
-    @wraps(func)
-    def is_stats_plus_func(update: Update, context: CallbackContext, *args, **kwargs):
-        bot = context.bot
-        user = update.effective_user
-        chat = update.effective_chat
-
-        if user and is_stats_plus(chat, user.id):
-            return func(update, context, *args, **kwargs)
-        if not user:
-            pass
-        elif DEL_CMDS and " " not in update.effective_message.text:
-            try:
-                update.effective_message.delete()
-            except:
-                pass
-        else:
-            update.effective_message.reply_text(
-                "Miku stats is just for Dev User",
-            )
-
-    return is_sudo_plus_func
-
 
 def support_plus(func):
     @wraps(func)
@@ -440,7 +417,7 @@ def user_can_change(func):
         member = update.effective_chat.get_member(user)	
         
 
-        if not (member.can_change_info or member.status == "creator") and not user in SUDO_USERS:
+        if not (member.can_change_info or member.status == "creator") and not user in DRAGONS:
             update.effective_message.reply_text("You are missing the following rights to use this command: \nCanChangeInfo")
                    	
             return ""	
