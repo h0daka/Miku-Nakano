@@ -44,7 +44,7 @@ def chat_join_req(upd: Update, ctx: CallbackContext):
 
 
 @mikucallback(pattern=r"cb_approve=")
-@user_admin(AdminPerms.CAN_INVITE_USERS, noreply=True)
+@user_admin(AdminPerms.CAN_INVITE_USERS)
 @loggable
 def approve_joinReq(update: Update, context: CallbackContext) -> str:
     bot = context.bot
@@ -77,7 +77,7 @@ def approve_joinReq(update: Update, context: CallbackContext) -> str:
 
 
 @mikucallback(pattern=r"cb_decline=")
-@user_admin(AdminPerms.CAN_INVITE_USERS, noreply=True)
+@user_admin(AdminPerms.CAN_INVITE_USERS)
 @loggable
 def decline_joinReq(update: Update, context: CallbackContext) -> str:
     bot = context.bot
