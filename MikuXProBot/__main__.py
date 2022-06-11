@@ -13,7 +13,7 @@ from typing import Optional
 from pyrogram import Client, idle, filters
 
 import MikuXProBot.modules.sql.users_sql as sql
-from MikuXProBot.utils.sudoers import bot_sys_stats as bss
+from MikuXProBot.modules.sudoers import bot_sys_stats as bss
 
 from MikuXProBot import (ALLOW_EXCL, CERT_PATH, DONATION_LINK, LOGGER,
                           OWNER_ID, PORT, SUPPORT_CHAT, TOKEN, URL, WEBHOOK,
@@ -22,7 +22,7 @@ from MikuXProBot import (ALLOW_EXCL, CERT_PATH, DONATION_LINK, LOGGER,
 # NOTE: Module order is not guaranteed, specify that in the config file!
 from MikuXProBot.modules import ALL_MODULES
 from MikuXProBot.modules.helper_funcs.chat_status import is_user_admin
-from MikuXProBot.modules.helper_funcs.misc import paginate_modules, paginate_moduless
+from MikuXProBot.modules.helper_funcs.misc import paginate_modules
 from telegram import (InlineKeyboardButton, InlineKeyboardMarkup, ParseMode,
                       Update)
 from telegram.error import (BadRequest, ChatMigrated, NetworkError,
