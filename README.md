@@ -16,7 +16,7 @@
 <img src="https://img.shields.io/badge/Pyrogram-1.4.1-red?style=for-the-badge&logo=appveyor" alt="Pyrogram Version">
 <a href="https://github.com/h0daka/Miku-Nakano"> <img src="https://img.shields.io/github/repo-size/h0daka/Miku-Nakano?color=red&logo=github&logoColor=green&style=for-the-badge" /></a>
 
-###  ╒═══「 Status 」
+##  ╒═══「 Status 」
 
 + [x] Maintained
 + [x] Support Group Included
@@ -35,7 +35,6 @@
 
 +  [Hodaka](https://github.com/h0daka) : OWNER | DEV
 +  [Rajkumar](https://github.com/Awesome-RJ) : BASE
-+  [Hirojazz](https://github.com/Hirojazz) : BASE
 +  [Dank-del](https://github.com/Dank-del) : BASE 
 
 ╘══「 Any other authorship/credits can be seen through the commits. 」
